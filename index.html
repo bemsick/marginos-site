@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MarginOS — Stop paying your suppliers more than you should. | margin.work</title>
+  <meta name="description" content="MarginOS shows you exactly how much you're overpaying on food and beverage — before you click Approve. Built for independent restaurants and bars." />
+  <link rel="canonical" href="https://margin.work" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://margin.work" />
+  <meta property="og:title" content="MarginOS — Stop paying your suppliers more than you should." />
+  <meta property="og:description" content="MarginOS shows you exactly how much you're overpaying on food and beverage — before you click Approve. Built for independent restaurants and bars." />
+  <meta property="og:image" content="https://margin.work/og-image.svg" />
+  <meta property="og:site_name" content="MarginOS" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://margin.work" />
+  <meta name="twitter:title" content="MarginOS — Stop paying your suppliers more than you should." />
+  <meta name="twitter:description" content="See every overcharge, price spike, and variance flagged automatically. Built for independent restaurants and bars." />
+  <meta name="twitter:image" content="https://margin.work/og-image.svg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Geist + Geist Mono via Google Fonts, with Inter fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MarginOS",
+    "url": "https://margin.work",
+    "logo": "https://margin.work/favicon.svg",
+    "description": "MarginOS is a procurement and operations platform for independent restaurants and bars. See every supplier overcharge, price spike, and variance flagged automatically — before you click Approve.",
+    "founder": {
+      "@type": "Person",
+      "name": "MarginOS Founder"
+    },
+    "sameAs": [
+      "https://margin.work"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ──────────────────── HEADER ──────────────────── -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="MarginOS home">
+        <!-- Stacked bar logo mark, ascending -->
+        <svg class="logo-mark" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2"  y="14" width="4" height="8"  rx="1" fill="currentColor"/>
+          <rect x="8"  y="10" width="4" height="12" rx="1" fill="currentColor"/>
+          <rect x="14" y="6"  width="4" height="16" rx="1" fill="currentColor"/>
+          <rect x="20" y="2"  width="2" height="20" rx="1" fill="currentColor" opacity=".55"/>
+        </svg>
+        <span class="logo-word">MarginOS</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#problem">Why MarginOS</a>
+        <a href="#product">Product</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="link-muted" href="https://youth-achievement-municipality-garlic.trycloudflare.com/login">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="https://youth-achievement-municipality-garlic.trycloudflare.com/signup">Get started</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-inner">
+      <a href="#problem">Why MarginOS</a>
+      <a href="#product">Product</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="mobile-nav-signin" href="https://youth-achievement-municipality-garlic.trycloudflare.com/login">Sign in</a>
+      <a class="btn btn-primary" href="https://youth-achievement-municipality-garlic.trycloudflare.com/signup">Get started</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ──────────────────── HERO ──────────────────── -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="kicker">MARGINOS · THE HOSPITALITY OS</div>
+          <h1 class="hero-headline">
+            Your suppliers charged you more than they should have this week.
+            <span class="hero-sub">MarginOS shows you exactly how much — before you click Approve.</span>
+          </h1>
+          <p class="hero-desc">Connect your invoices. See every overcharge, price spike, and variance flagged automatically. Built for independent restaurants and bars.</p>
+
+          <div class="hero-cta">
+            <a href="https://youth-achievement-municipality-garlic.trycloudflare.com/signup" class="btn btn-primary btn-lg">Start free — 14 days</a>
+            <a href="#video" class="link-arrow">Watch 90-second demo <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="micro">No credit card. Cancel anytime. First savings in 5 minutes.</p>
+        </div>
+
+        <!-- Hero carousel: 6 category invoice cards, auto-scroll infinite loop -->
+        <div class="hero-mock hero-carousel reveal" aria-label="Product preview: invoices across food, beverage, equipment, glassware, paper goods, and linens — all flagged for overcharges">
+          <div class="carousel-mask">
+            <div class="carousel-track">
+
+              <!-- ─── Card 1 · FOOD ─── -->
+              <article class="mock-card carousel-card" aria-label="Food invoice">
+                <div class="mock-head">
+                  <div class="mock-dots"><span></span><span></span><span></span></div>
+                  <div class="mock-title"><span class="vendor-blur">Sysco</span> · #84213</div>
+                  <div class="mock-badge">Food</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">RIBEYE 12oz</div>
+                        <div class="mock-meta">USDA Choice · 4-pack case</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$17.40</span></div>
+                        <div class="mock-price-then">Last week <span class="num">$15.20</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$2.20 / unit</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$88/mo</span> at your volume</span></div>
+                  </div>
+                  <div class="mock-divider"></div>
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">TOMATO 25lb case</div>
+                        <div class="mock-meta">Vine-ripe · Grade A</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$38.50</span></div>
+                        <div class="mock-price-then">Last week <span class="num">$32.00</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$6.50 / case</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$142/mo</span> at your volume</span></div>
+                  </div>
+                </div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <!-- ─── Card 2 · BEVERAGE ─── -->
+              <article class="mock-card carousel-card" aria-label="Beverage invoice">
+                <div class="mock-head">
+                  <div class="mock-dots"><span></span><span></span><span></span></div>
+                  <div class="mock-title"><span class="vendor-blur">Breakthru</span> · #BW-9921</div>
+                  <div class="mock-badge">Beverage</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">HAZY IPA · 1/2 bbl</div>
+                        <div class="mock-meta"><span class="vendor-blur">Sierra Nevada</span> · half keg</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$198.00</span></div>
+                        <div class="mock-price-then">Last month <span class="num">$184.00</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$14.00 / keg</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$112/mo</span> at your volume</span></div>
+                  </div>
+                  <div class="mock-divider"></div>
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku"><span class="vendor-blur">TITO'S</span> VODKA 1.75L</div>
+                        <div class="mock-meta">Case of 6</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$232.40</span></div>
+                        <div class="mock-price-then">Last month <span class="num">$219.00</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$13.40 / case</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$94/mo</span> at your volume</span></div>
+                  </div>
+                </div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <!-- ─── Card 3 · EQUIPMENT ─── -->
+              <article class="mock-card carousel-card" aria-label="Equipment quote">
+                <div class="mock-head">
+                  <div class="mock-dots"><span></span><span></span><span></span></div>
+                  <div class="mock-title"><span class="vendor-blur">TriMark</span> · #TR-5502</div>
+                  <div class="mock-badge">Equipment</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">CHAR-BROILER 36"</div>
+                        <div class="mock-meta"><span class="vendor-blur">Vulcan</span> · natural gas</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Quoted <span class="num">$3,480</span></div>
+                        <div class="mock-price-then">Market avg <span class="num">$3,120</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$360 vs market</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Counter-quote ready — 3 other suppliers beat by <span class="num">$380+</span></span></div>
+                  </div>
+                  <div class="mock-divider"></div>
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">PREP TABLE 48" SS</div>
+                        <div class="mock-meta"><span class="vendor-blur">Advance Tabco</span> · w/ undershelf</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Quoted <span class="num">$612</span></div>
+                        <div class="mock-price-then">Market avg <span class="num">$575</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$37 vs market</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>One-time catch — <span class="num">$37</span> saved</span></div>
+                  </div>
+                </div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <!-- ─── Card 4 · GLASSWARE / FOH ─── -->
+              <article class="mock-card carousel-card" aria-label="Glassware invoice">
+                <div class="mock-head">
+                  <div class="mock-dots"><span></span><span></span><span></span></div>
+                  <div class="mock-title"><span class="vendor-blur">Gordon Food Service</span> · #GF-3311</div>
+                  <div class="mock-badge">Glassware</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">PINT GLASS 16oz</div>
+                        <div class="mock-meta"><span class="vendor-blur">Libbey</span> · case of 24</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$42.80</span></div>
+                        <div class="mock-price-then">Last order <span class="num">$36.50</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$6.30 / case</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$76/mo</span> at breakage rate</span></div>
+                  </div>
+                  <div class="mock-divider"></div>
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">DINNER PLATE 10.5"</div>
+                        <div class="mock-meta"><span class="vendor-blur">Oneida</span> · case of 12</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$58.20</span></div>
+                        <div class="mock-price-then">Last order <span class="num">$51.00</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$7.20 / case</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$54/mo</span> at your volume</span></div>
+                  </div>
+                </div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <!-- ─── Card 5 · PAPER & CHEMICAL ─── -->
+              <article class="mock-card carousel-card" aria-label="Paper and cleaning invoice">
+                <div class="mock-head">
+                  <div class="mock-dots"><span></span><span></span><span></span></div>
+                  <div class="mock-title"><span class="vendor-blur">Ecolab</span> · #EL-77104</div>
+                  <div class="mock-badge">Paper&nbsp;/&nbsp;Chem</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">DEGREASER 5gal</div>
+                        <div class="mock-meta"><span class="vendor-blur">Ecolab</span> · Greaselift</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$94.50</span></div>
+                        <div class="mock-price-then">Last month <span class="num">$82.00</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$12.50 / pail</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$68/mo</span> at your volume</span></div>
+                  </div>
+                  <div class="mock-divider"></div>
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">TO-GO BOX 9" kraft</div>
+                        <div class="mock-meta"><span class="vendor-blur">Pactiv</span> · case of 200</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$86.40</span></div>
+                        <div class="mock-price-then">Last month <span class="num">$74.20</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$12.20 / case</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$146/mo</span> at your volume</span></div>
+                  </div>
+                </div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <!-- ─── Card 6 · LINENS / UNIFORMS ─── -->
+              <article class="mock-card carousel-card" aria-label="Linens invoice">
+                <div class="mock-head">
+                  <div class="mock-dots"><span></span><span></span><span></span></div>
+                  <div class="mock-title"><span class="vendor-blur">Cintas</span> · #CT-22918</div>
+                  <div class="mock-badge">Linens</div>
+                </div>
+                <div class="mock-body">
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">BAR MOPS · 24-bundle</div>
+                        <div class="mock-meta">Weekly rental · delivered</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$38.80</span></div>
+                        <div class="mock-price-then">6 mo ago <span class="num">$32.00</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +21% price creep</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Rental creep — <span class="num">$27/wk</span> added since Jan</span></div>
+                  </div>
+                  <div class="mock-divider"></div>
+                  <div class="mock-line">
+                    <div class="mock-line-head">
+                      <div>
+                        <div class="mock-sku">CHEF COATS L</div>
+                        <div class="mock-meta">Weekly rental · 8 units</div>
+                      </div>
+                      <div class="mock-price-col">
+                        <div class="mock-price-now">Invoiced <span class="num">$44.00</span></div>
+                        <div class="mock-price-then">6 mo ago <span class="num">$38.40</span></div>
+                      </div>
+                    </div>
+                    <div class="mock-delta danger"><span class="num">↑ +$5.60 / week</span></div>
+                    <div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Rental creep — <span class="num">$22/mo</span> recoverable</span></div>
+                  </div>
+                </div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <!-- Duplicate set for seamless infinite loop -->
+              <article class="mock-card carousel-card" aria-hidden="true">
+                <div class="mock-head"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-title"><span class="vendor-blur">Sysco</span> · #84213</div><div class="mock-badge">Food</div></div>
+                <div class="mock-body"><div class="mock-line"><div class="mock-line-head"><div><div class="mock-sku">RIBEYE 12oz</div><div class="mock-meta">USDA Choice · 4-pack case</div></div><div class="mock-price-col"><div class="mock-price-now">Invoiced <span class="num">$17.40</span></div><div class="mock-price-then">Last week <span class="num">$15.20</span></div></div></div><div class="mock-delta danger"><span class="num">↑ +$2.20 / unit</span></div><div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$88/mo</span> at your volume</span></div></div><div class="mock-divider"></div><div class="mock-line"><div class="mock-line-head"><div><div class="mock-sku">TOMATO 25lb case</div><div class="mock-meta">Vine-ripe · Grade A</div></div><div class="mock-price-col"><div class="mock-price-now">Invoiced <span class="num">$38.50</span></div><div class="mock-price-then">Last week <span class="num">$32.00</span></div></div></div><div class="mock-delta danger"><span class="num">↑ +$6.50 / case</span></div><div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$142/mo</span> at your volume</span></div></div></div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <article class="mock-card carousel-card" aria-hidden="true">
+                <div class="mock-head"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-title"><span class="vendor-blur">Breakthru</span> · #BW-9921</div><div class="mock-badge">Beverage</div></div>
+                <div class="mock-body"><div class="mock-line"><div class="mock-line-head"><div><div class="mock-sku">HAZY IPA · 1/2 bbl</div><div class="mock-meta"><span class="vendor-blur">Sierra Nevada</span> · half keg</div></div><div class="mock-price-col"><div class="mock-price-now">Invoiced <span class="num">$198.00</span></div><div class="mock-price-then">Last month <span class="num">$184.00</span></div></div></div><div class="mock-delta danger"><span class="num">↑ +$14.00 / keg</span></div><div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$112/mo</span> at your volume</span></div></div><div class="mock-divider"></div><div class="mock-line"><div class="mock-line-head"><div><div class="mock-sku"><span class="vendor-blur">TITO'S</span> VODKA 1.75L</div><div class="mock-meta">Case of 6</div></div><div class="mock-price-col"><div class="mock-price-now">Invoiced <span class="num">$232.40</span></div><div class="mock-price-then">Last month <span class="num">$219.00</span></div></div></div><div class="mock-delta danger"><span class="num">↑ +$13.40 / case</span></div><div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Overcharge — <span class="num">$94/mo</span> at your volume</span></div></div></div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+              <article class="mock-card carousel-card" aria-hidden="true">
+                <div class="mock-head"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-title"><span class="vendor-blur">TriMark</span> · #TR-5502</div><div class="mock-badge">Equipment</div></div>
+                <div class="mock-body"><div class="mock-line"><div class="mock-line-head"><div><div class="mock-sku">CHAR-BROILER 36"</div><div class="mock-meta"><span class="vendor-blur">Vulcan</span> · natural gas</div></div><div class="mock-price-col"><div class="mock-price-now">Quoted <span class="num">$3,480</span></div><div class="mock-price-then">Market avg <span class="num">$3,120</span></div></div></div><div class="mock-delta danger"><span class="num">↑ +$360 vs market</span></div><div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>Counter-quote ready — 3 other suppliers beat by <span class="num">$380+</span></span></div></div><div class="mock-divider"></div><div class="mock-line"><div class="mock-line-head"><div><div class="mock-sku">PREP TABLE 48" SS</div><div class="mock-meta"><span class="vendor-blur">Advance Tabco</span> · w/ undershelf</div></div><div class="mock-price-col"><div class="mock-price-now">Quoted <span class="num">$612</span></div><div class="mock-price-then">Market avg <span class="num">$575</span></div></div></div><div class="mock-delta danger"><span class="num">↑ +$37 vs market</span></div><div class="mock-flag flag-green"><span class="flag-emoji" aria-hidden="true">💡</span><span>One-time catch — <span class="num">$37</span> saved</span></div></div></div>
+                <div class="mock-foot"><button class="mock-btn mock-btn-ghost">Approve all</button><button class="mock-btn mock-btn-primary">Counter-quote</button></div>
+              </article>
+
+            </div>
+          </div>
+          <div class="carousel-caption" aria-hidden="true">Food · Beverage · Equipment · Glassware · Paper & Chem · Linens — every line, every week.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────── TRUST STRIP ──────────────────── -->
+    <section class="trust">
+      <div class="container">
+        <p class="trust-label">Built for independent operators. Loved by their reps.</p>
+        <div class="trust-logos" aria-label="Distributor partners">
+          <span class="trust-inline">Works with invoices from every broadliner, beverage, equipment, chemical, paper, and linen distributor — any supplier that sends you a PDF.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 2 · PROBLEM ──────────────────── -->
+    <section class="section section-problem" id="problem">
+      <div class="container">
+        <div class="eyebrow">THE PROBLEM</div>
+        <h2 class="section-heading reveal">Food and beverage is 30–35% of your revenue. Your suppliers know that.</h2>
+        <div class="two-col reveal">
+          <p>The average restaurant processes 200+ invoices a month across 6–12 suppliers. Every one of them quietly slips prices up week over week. Margins erode by a few cents here, a few dollars there — until they're gone. You don't have time to audit every line item. They're counting on that.</p>
+          <p>MarginOS reads every invoice the moment it arrives. Compares every line to your recent history, to other MarginOS operators in your region, to the market. Flags every overcharge before you click Approve. Sends it back to the supplier with your counter in one tap.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 3 · VIDEO ──────────────────── -->
+    <section class="section section-video" id="video">
+      <div class="container center">
+        <h2 class="section-heading reveal">See it work in 90 seconds.</h2>
+        <p class="section-sub reveal">One invoice upload. One flagged overcharge. One counter-quote sent. Watch an operator save <span class="num">$280/mo</span> on tomatoes.</p>
+
+        <button class="video-card reveal" id="videoPlayBtn" aria-label="Play 90-second product demo">
+          <div class="video-still" aria-hidden="true">
+            <!-- Faux still frame: replica of product UI behind gradient -->
+            <div class="video-still-inner">
+              <div class="video-still-line">
+                <span class="num">TOMATO 25lb case</span>
+                <span class="num danger">+$6.50</span>
+              </div>
+              <div class="video-still-bar"><span style="width:82%"></span></div>
+              <div class="video-still-line">
+                <span class="num">RIBEYE 12oz</span>
+                <span class="num danger">+$2.20</span>
+              </div>
+              <div class="video-still-bar"><span style="width:64%"></span></div>
+              <div class="video-still-line">
+                <span class="num" style="color:var(--green-primary)">Counter sent · <span class="vendor-blur">Sysco</span></span>
+                <span class="num" style="color:var(--green-primary)">-$280/mo</span>
+              </div>
+              <div class="video-still-bar"><span style="width:94%; background:var(--green-primary)"></span></div>
+            </div>
+          </div>
+          <span class="play-btn" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span class="video-time">01:30</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 4 · PRODUCT GLIMPSE ──────────────────── -->
+    <section class="section section-product" id="product">
+      <div class="container">
+        <h2 class="section-heading center reveal">Compare · Decide · Never get overcharged.</h2>
+
+        <div class="product-grid">
+          <!-- Card 1 · COMPARE -->
+          <article class="product-card reveal">
+            <div class="pc-label">COMPARE</div>
+            <h3 class="pc-title">Compare every supplier side by side</h3>
+            <p class="pc-body">One RFQ. Every rep quotes on their phone in 2 minutes. All quotes land side by side — no more spreadsheet chaos.</p>
+            <div class="pc-mock" aria-label="Three supplier quotes compared, US Foods recommended">
+              <div class="pc-mock-row pc-mock-header">
+                <span>SUPPLIER</span>
+                <span>QUOTE</span>
+              </div>
+              <div class="pc-mock-row">
+                <span><span class="vendor-blur">TriMark</span></span>
+                <span class="num">$124</span>
+              </div>
+              <div class="pc-mock-row">
+                <span><span class="vendor-blur">Sysco</span></span>
+                <span class="num">$118</span>
+              </div>
+              <div class="pc-mock-row pc-mock-row-win">
+                <span><span class="vendor-blur">US Foods</span> <span class="star">★ Recommended</span></span>
+                <span class="num">$115</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 · DECIDE -->
+          <article class="product-card reveal">
+            <div class="pc-label">DECIDE</div>
+            <h3 class="pc-title">Know exactly why a supplier won</h3>
+            <p class="pc-body">Every recommendation shows its math. "Cheapest that arrives by Friday (<span class="vendor-blur">Sysco</span>, 3-day lead, $15.20/unit)." Never award on a gut feel again.</p>
+            <div class="pc-mock pc-mock-reason" aria-label="Recommendation reasoning">
+              <div class="reason-top">
+                <span class="dot"></span>
+                <span class="reason-title">★ Recommended</span>
+              </div>
+              <p class="reason-body">Cheapest that arrives by <span class="num">Tue Apr 28</span></p>
+              <div class="reason-meta">
+                <span><span class="vendor-blur">US Foods</span></span>
+                <span>·</span>
+                <span>3-day lead</span>
+                <span>·</span>
+                <span class="num">$4.20 / ea</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 · NEVER -->
+          <article class="product-card reveal">
+            <div class="pc-label">NEVER</div>
+            <h3 class="pc-title">Catch overcharges the second they hit</h3>
+            <p class="pc-body">MarginOS reads every invoice as it arrives. Flags every price change. No more paying $17.40 for a $15.20 ribeye.</p>
+            <div class="pc-mock pc-mock-alert" aria-label="Overcharge alert">
+              <div class="alert-row">
+                <span class="alert-emoji" aria-hidden="true">⚠</span>
+                <div>
+                  <div class="alert-headline"><span class="vendor-blur">Sysco</span> raised ribeye <span class="num">14.5%</span> this week.</div>
+                  <div class="alert-sub">You'd overpay <span class="num">$88/mo</span>.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 5 · FEATURES ──────────────────── -->
+    <section class="section section-features section-alt">
+      <div class="container">
+        <h2 class="section-heading center reveal">Everything an operator needs. Nothing a consultant wanted.</h2>
+
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 3h9l5 5v13H6z"/>
+                <path d="M15 3v5h5"/>
+                <path d="M9 13h7M9 17h7M9 9h3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Invoice auditing on autopilot</h3>
+            <p class="feature-body">Upload one PDF or connect your email. MarginOS reads every line item and flags every overcharge within 60 seconds.</p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="6" width="18" height="12" rx="2"/>
+                <path d="M3 10h18"/>
+                <path d="M8 15h3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">No-login supplier portal</h3>
+            <p class="feature-body">Reps open a text link, price what they carry, decline the rest. No app, no signup, no friction. Suppliers free forever.</p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 17l5-5 4 4 8-9"/>
+                <path d="M14 7h6v6"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Real-time price intelligence</h3>
+            <p class="feature-body">Compare your prices against other operators in your region. Know when you're getting a good deal before you sign the PO.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 6 · TESTIMONIAL ──────────────────── -->
+    <section class="section section-quote">
+      <div class="container center">
+        <figure class="pullquote reveal">
+          <svg class="quote-mark" width="40" height="40" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true">
+            <path d="M12 10c-4 2-6 5-6 10v10h10V20h-5c0-3 1-6 4-7zm18 0c-4 2-6 5-6 10v10h10V20h-5c0-3 1-6 4-7z" opacity=".18"/>
+          </svg>
+          <blockquote>
+            "MarginOS caught three overcharges in my first week. I'd been paying my broadliner <strong class="q-num">$2.20</strong> too much per pound of ribeye for six months and never noticed. That's <strong class="q-num">$3,400</strong> I'd already lost — and now I see every change the moment it happens."
+          </blockquote>
+          <figcaption>— Pilot operator, Austin TX · name on request
+            <span class="quote-note">Pilot operator · coming soon</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 7 · PRICING ──────────────────── -->
+    <section class="section section-pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-heading center reveal">Built for operators. Priced like it.</h2>
+        <p class="section-sub center reveal">Every plan is a complete module. Start with Procurement — expand as you grow.</p>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <header class="price-head">
+              <div class="price-tier">Starter</div>
+              <div class="price-amount"><span class="num">$49</span><span class="price-unit">/mo</span></div>
+              <div class="price-sub">Procurement OS</div>
+            </header>
+            <ul class="price-list">
+              <li>Compare suppliers</li>
+              <li>Award RFQs</li>
+              <li>Invoice match</li>
+              <li>Waste logging</li>
+            </ul>
+            <a href="#close" class="btn btn-secondary btn-block">Start free</a>
+          </article>
+
+          <article class="price-card price-card-reco reveal">
+            <div class="reco-badge">Recommended</div>
+            <header class="price-head">
+              <div class="price-tier">Control</div>
+              <div class="price-amount"><span class="num">$99</span><span class="price-unit">/mo</span></div>
+              <div class="price-sub">Starter + Intelligence</div>
+            </header>
+            <ul class="price-list">
+              <li>All Starter features</li>
+              <li>Price-drift alerts</li>
+              <li>Flash reports</li>
+              <li>Recipe costing</li>
+              <li>Industry benchmarks</li>
+            </ul>
+            <a href="#close" class="btn btn-primary btn-block">Start free</a>
+          </article>
+
+          <article class="price-card reveal">
+            <header class="price-head">
+              <div class="price-tier">Operations</div>
+              <div class="price-amount"><span class="num">$179</span><span class="price-unit">/mo</span></div>
+              <div class="price-sub">Control + Operations</div>
+            </header>
+            <ul class="price-list">
+              <li>All Control features</li>
+              <li>Schedule builder</li>
+              <li>Time clock</li>
+              <li>Compliance</li>
+              <li>Reservations</li>
+            </ul>
+            <a href="#close" class="btn btn-secondary btn-block">Start free</a>
+          </article>
+
+          <article class="price-card reveal">
+            <header class="price-head">
+              <div class="price-tier">Hospitality OS</div>
+              <div class="price-amount"><span class="num">$299</span><span class="price-unit">/mo</span></div>
+              <div class="price-sub">Full stack</div>
+            </header>
+            <ul class="price-list">
+              <li>Everything</li>
+              <li>Bar OS</li>
+              <li>AI copilot</li>
+              <li>Campaigns</li>
+              <li>Finance</li>
+            </ul>
+            <a href="#close" class="btn btn-secondary btn-block">Start free</a>
+          </article>
+        </div>
+
+        <div class="supplier-pill reveal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          Suppliers are free forever. No subscription. No take-rate. No skim.
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 8 · CLOSE ──────────────────── -->
+    <section class="section section-close" id="close">
+      <div class="container center">
+        <h2 class="section-heading reveal">Stop overpaying. Start tomorrow.</h2>
+        <p class="section-sub reveal">Upload one invoice. See three overcharges. Takes five minutes. Your first RFQ goes out before you pour your afternoon coffee.</p>
+        <a href="#" class="btn btn-primary btn-lg reveal">Start free — 14 days</a>
+        <p class="micro">No credit card. No demo required. Cancel anytime.</p>
+      </div>
+    </section>
+
+    <!-- ──────────────────── SECTION 9 · FAQ ──────────────────── -->
+    <section class="section section-faq" id="faq">
+      <div class="container faq-wrap">
+        <h2 class="section-heading reveal">Questions operators ask us</h2>
+
+        <div class="faq" id="faqList">
+          <details class="faq-item">
+            <summary>How is this different from MarginEdge or Restaurant365?
+              <span class="chev" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </summary>
+            <div class="faq-body">Those tools are built for chains, sold by enterprise reps, and start at $300+/mo with mandatory demos. MarginOS is built for independent operators, self-serve, and the supplier-side is free forever — which means reps actually use it.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Will my suppliers actually quote through this?
+              <span class="chev" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </summary>
+            <div class="faq-body">Yes — because there's no login, no signup, and no app to install. Reps open a text message link on their phone and price what they carry in 2 minutes. Over 90% of test reps submitted their first quote within 5 minutes of receiving the link.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if I don't have digital invoices?
+              <span class="chev" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </summary>
+            <div class="faq-body">Take a photo of the paper one. MarginOS reads scanned PDFs and photos with 95%+ accuracy within 60 seconds.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you integrate with my POS?
+              <span class="chev" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </summary>
+            <div class="faq-body">Toast, Square, Clover, and Restaurant365 integrations are shipping in the next quarter. Until then, CSV upload works for any POS.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is my supplier data private?
+              <span class="chev" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </summary>
+            <div class="faq-body">Yes. Your prices are yours. We use aggregated, anonymized pricing for regional benchmarks — never your specific vendor relationships or pricing.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ──────────────────── FOOTER ──────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#" aria-label="MarginOS home">
+          <svg class="logo-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2"  y="14" width="4" height="8"  rx="1" fill="currentColor"/>
+            <rect x="8"  y="10" width="4" height="12" rx="1" fill="currentColor"/>
+            <rect x="14" y="6"  width="4" height="16" rx="1" fill="currentColor"/>
+            <rect x="20" y="2"  width="2" height="20" rx="1" fill="currentColor" opacity=".55"/>
+          </svg>
+          <span class="logo-word">MarginOS</span>
+        </a>
+        <p class="footer-tag">The Hospitality OS. Starting with procurement.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <div class="footer-h">Product</div>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Roadmap</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-h">Company</div>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-h">Suppliers</div>
+          <ul>
+            <li><a href="#">Supplier Portal</a></li>
+            <li><a href="#">For Reps</a></li>
+            <li><a href="#">Why Free Forever</a></li>
+            <li><a href="#">Rep Updates</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">© 2026 MarginOS, Inc. · margin.work</p>
+        <p class="footer-disclaimer">MarginOS is an independent platform and is not affiliated with, endorsed by, or sponsored by any distributor. All third-party names and trademarks are the property of their respective owners and are used for descriptive purposes only. Vendor names shown in product previews are illustrative and visually blurred.</p>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21H9z"/></svg>
+          </a>
+          <a href="#" aria-label="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21.5l-7.52 8.59L23 22h-6.84l-5.36-7-6.13 7H1.42l8.05-9.19L1 2h7.02l4.85 6.41L18.244 2zm-1.2 18h1.88L7.05 4H5.05l12 16z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video modal -->
+  <div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Product demo">
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-frame">
+      <button class="video-modal-close" data-video-close aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+      <video id="videoPlayer" controls playsinline preload="metadata">
+        <source src="demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
