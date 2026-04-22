@@ -16,19 +16,35 @@
   const toggle = document.getElementById('navToggle');
   const mobileNav = document.getElementById('mobileNav');
   if (toggle && mobileNav) {
+    let lastFocus = null;
+    const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const getFocusable = () =>
+      Array.from(mobileNav.querySelectorAll(focusableSelector)).filter(
+        (el) => !el.hasAttribute('disabled') && el.offsetParent !== null
+      );
     const close = () => {
       mobileNav.classList.remove('open');
       mobileNav.setAttribute('aria-hidden', 'true');
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open menu');
       document.body.style.overflow = '';
+      if (lastFocus && typeof lastFocus.focus === 'function') {
+        lastFocus.focus();
+      }
     };
     const open = () => {
+      lastFocus = document.activeElement;
       mobileNav.classList.add('open');
       mobileNav.setAttribute('aria-hidden', 'false');
       toggle.setAttribute('aria-expanded', 'true');
       toggle.setAttribute('aria-label', 'Close menu');
       document.body.style.overflow = 'hidden';
+      // Focus first focusable element inside the sheet
+      const focusables = getFocusable();
+      if (focusables.length) {
+        // Defer one frame so the sheet is visible and focusable
+        requestAnimationFrame(() => focusables[0].focus());
+      }
     };
     toggle.addEventListener('click', () => {
       if (mobileNav.classList.contains('open')) close();
@@ -38,7 +54,26 @@
       a.addEventListener('click', close)
     );
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileNav.classList.contains('open')) close();
+      if (!mobileNav.classList.contains('open')) return;
+      if (e.key === 'Escape') {
+        close();
+        return;
+      }
+      if (e.key === 'Tab') {
+        // Focus trap: keep focus inside the mobile sheet
+        const focusables = getFocusable();
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        const active = document.activeElement;
+        if (e.shiftKey && active === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && active === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     });
   }
 
@@ -74,6 +109,45 @@
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
     reveals.forEach((el) => io.observe(el));
+  }
+
+  // Blurred vendor names are decorative — hide from screen readers
+  document.querySelectorAll('.vendor-blur').forEach((el) => {
+    el.setAttribute('aria-hidden', 'true');
+  });
+
+  // Decorative SVG icons inside buttons/links — hide from screen readers
+  document.querySelectorAll('button svg, a svg').forEach((svg) => {
+    if (!svg.hasAttribute('aria-hidden') && !svg.hasAttribute('aria-label')) {
+      svg.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Active section highlighting as user scrolls
+  if ('IntersectionObserver' in window) {
+    const navLinks = document.querySelectorAll('.primary-nav a[href^="#"]');
+    const sections = [];
+    navLinks.forEach((link) => {
+      const id = link.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) sections.push({ link, el });
+    });
+    if (sections.length) {
+      const navIo = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const match = sections.find((s) => s.el === entry.target);
+            if (!match) return;
+            if (entry.isIntersecting) {
+              navLinks.forEach((l) => l.classList.remove('is-active'));
+              match.link.classList.add('is-active');
+            }
+          });
+        },
+        { threshold: 0.4, rootMargin: '-80px 0px -40% 0px' }
+      );
+      sections.forEach((s) => navIo.observe(s.el));
+    }
   }
 
   // Smooth anchor scrolling (respect sticky header)

@@ -261,6 +261,20 @@ ul { list-style: none; margin: 0; padding: 0; }
   transition: color var(--dur) var(--ease);
 }
 .primary-nav a:hover { color: var(--ink); }
+.primary-nav a.is-active {
+  color: var(--ink);
+  position: relative;
+}
+.primary-nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--green-primary, #15803D);
+  border-radius: 2px;
+}
 .header-actions {
   display: flex;
   align-items: center;
@@ -273,8 +287,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: fixed;
   inset: 0;
   z-index: 99;
-  background: rgba(249, 249, 247, 0.98);
-  backdrop-filter: blur(16px);
+  background: var(--bg, #F9F9F7);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--dur) var(--ease);
@@ -282,6 +295,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   align-items: center;
   justify-content: center;
 }
+/* Solid background — audit flagged text bleeding through the translucent sheet. */
 .mobile-nav.open {
   opacity: 1;
   pointer-events: auto;
@@ -1181,7 +1195,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   max-width: 520px;
   font-size: 11px;
   line-height: 1.55;
-  color: #6b6b6b;
+  color: var(--ink-3);
   letter-spacing: 0.01em;
 }
 
@@ -1262,3 +1276,391 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding-top: 18px;
 }
 .mobile-nav-signin:hover { color: #111; }
+
+
+/* ─── Headline inline price pill (replaces .num for headline) ─── */
+.hl-price {
+  font-family: var(--font-sans);
+  font-feature-settings: 'tnum','zero';
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ─── Hero price-drift chart ─── */
+.hero-drift {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+.drift-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 580px;
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+.drift-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-subtle);
+}
+.drift-head-left { min-width: 0; }
+.drift-sku {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  font-family: var(--font-mono);
+  font-feature-settings: 'zero','cv11';
+}
+.drift-meta {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.drift-badge {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-primary);
+  background: var(--green-soft);
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.drift-badge::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green-primary);
+  animation: drift-pulse 1.8s ease-in-out infinite;
+}
+@keyframes drift-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.8); }
+}
+
+/* Chart area */
+.drift-chart {
+  padding: 18px 22px 14px;
+  position: relative;
+}
+.drift-svg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 500 / 145;
+  display: block;
+  overflow: visible;
+}
+
+.drift-grid {
+  stroke: var(--line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.7;
+}
+.drift-grid-mid { stroke-dasharray: 2 3; opacity: 0.5; }
+
+.drift-line {
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+}
+.drift-line-ok { stroke: var(--green-primary); opacity: 0.85; }
+.drift-line-danger {
+  stroke: var(--danger);
+  stroke-dasharray: 4 3;
+  opacity: 0.9;
+}
+.drift-gap-guide {
+  stroke: var(--danger);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.5;
+}
+
+.drift-dot-ok circle { fill: var(--green-primary); }
+.drift-dot-ok .drift-dot-inner { fill: var(--bg-elev); }
+.drift-dot-danger circle { fill: var(--danger); }
+.drift-dot-danger .drift-dot-inner { fill: var(--bg-elev); }
+
+.drift-lbl-price {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--ink);
+  letter-spacing: -0.01em;
+  font-feature-settings: 'tnum','zero';
+}
+.drift-lbl-danger .drift-lbl-price,
+.drift-lbl-price.drift-lbl-price-danger { fill: var(--danger); }
+g.drift-lbl-danger text { fill: var(--danger); }
+
+.drift-gap-pill rect {
+  fill: var(--danger);
+  opacity: 0.12;
+}
+.drift-gap-pill text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--danger);
+  font-feature-settings: 'tnum','zero';
+}
+
+/* X-axis labels — one column under each of the 5 data points */
+.drift-xaxis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 10px;
+  padding: 0 4px;
+}
+.drift-xcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.1;
+}
+.drift-xlabel {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.drift-xdate {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  font-feature-settings: 'tnum','zero';
+}
+.drift-xcol-danger .drift-xlabel { color: var(--danger); font-weight: 600; }
+
+/* Footer */
+.drift-foot {
+  border-top: 1px solid var(--line);
+  padding: 14px 22px;
+  background: var(--bg-subtle);
+}
+.drift-foot-lead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.drift-foot-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--danger);
+  background: rgba(220,38,38,0.09);
+  padding: 4px 9px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.drift-foot-msg {
+  font-size: 13px;
+  color: var(--ink-2);
+  letter-spacing: -0.005em;
+  line-height: 1.4;
+}
+.drift-foot-num {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum','zero';
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Footer legal line */
+.footer-legal {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  margin: 4px 0 12px;
+}
+.footer-legal a {
+  color: var(--ink-3);
+  transition: color var(--dur) var(--ease);
+}
+.footer-legal a:hover { color: var(--ink); }
+
+/* ─── Responsive: tablet ─── */
+@media (max-width: 860px) {
+  .drift-card { max-width: 580px; margin: 0 auto; }
+}
+
+/* ─── Responsive: mobile ─── */
+@media (max-width: 640px) {
+  .drift-chart { padding: 14px 14px 10px; }
+  .drift-head { padding: 14px 16px 12px; }
+  .drift-sku { font-size: 12px; }
+  .drift-meta { font-size: 11px; }
+  .drift-badge { font-size: 9.5px; padding: 3px 8px; }
+  .drift-lbl-price { font-size: 12px; }
+  .drift-gap-pill text { font-size: 10.5px; }
+  .drift-xlabel { font-size: 8.5px; }
+  .drift-xdate { font-size: 10px; }
+  .drift-foot { padding: 12px 16px; }
+  .drift-foot-msg { font-size: 12px; }
+  .drift-foot-pill { font-size: 9.5px; padding: 3px 8px; }
+  .drift-svg { aspect-ratio: 500 / 160; }
+}
+
+/* ─── Hero pilot badge (above headline) ─── */
+.hero-pilot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  background: rgba(21, 128, 61, 0.08);
+  border: 1px solid rgba(21, 128, 61, 0.18);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #0F5F2D;
+  line-height: 1.3;
+}
+.hero-pilot-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-primary, #15803D);
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.18);
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .hero-pilot-badge { font-size: 11.5px; padding: 5px 10px; }
+}
+
+/* ─── Pilot CTA section (replaces fake testimonial) ─── */
+.section-pilot-cta {
+  padding: clamp(60px, 8vw, 100px) 0;
+}
+.pilot-cta {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #F4F7F2 0%, #EEF3EB 100%);
+  border: 1px solid rgba(21, 128, 61, 0.12);
+  text-align: center;
+}
+.pilot-cta-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--green-primary, #15803D);
+  margin-bottom: 12px;
+}
+.pilot-cta-heading {
+  font-size: clamp(24px, 3.4vw, 34px);
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+.pilot-cta-body {
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 auto 24px;
+  max-width: 560px;
+}
+.pilot-cta .btn {
+  margin-top: 4px;
+}
+
+/* ─── Pricing: 3-column grid ─── */
+.pricing-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media (max-width: 960px) {
+  .pricing-grid-3 { grid-template-columns: 1fr; max-width: 480px; }
+}
+
+/* Waitlist price card — distinct, no CTA */
+.price-card-waitlist {
+  background: #FAFAF8;
+  border-style: dashed;
+  border-color: rgba(17, 17, 17, 0.14);
+  position: relative;
+}
+.price-card-waitlist .price-tier,
+.price-card-waitlist .price-amount,
+.price-card-waitlist .price-sub,
+.price-card-waitlist .price-list {
+  opacity: 0.92;
+}
+.waitlist-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  border-radius: 100px;
+  background: rgba(17, 17, 17, 0.06);
+  color: var(--ink-2);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Inline feature note (smaller, muted) */
+.feat-note {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  font-weight: 400;
+}
+
+/* Pricing footnote under grid */
+.pricing-footnote {
+  margin: 28px auto 0;
+  max-width: 720px;
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+.pricing-footnote a {
+  color: var(--green-primary, #15803D);
+  font-weight: 500;
+}
+.pricing-footnote a:hover { text-decoration: underline; }
+
+/* ─── Video still: additional gradient so it doesn't look like a black void ─── */
+.video-still-gradient {
+  background:
+    radial-gradient(120% 80% at 30% 20%, rgba(21, 128, 61, 0.18) 0%, rgba(21, 128, 61, 0) 55%),
+    radial-gradient(100% 70% at 85% 90%, rgba(255, 140, 140, 0.10) 0%, rgba(255, 140, 140, 0) 50%),
+    linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+}
