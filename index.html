@@ -4,24 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>MarginOS — Catch the price drift between quote and invoice. | margin.work</title>
-  <meta name="description" content="MarginOS shows you every price your vendors quoted vs. every price they charged. When the distributor allows a dispute, we file it for you. When they don't, you've got receipts for the next negotiation." />
+  <title>MarginOS — Restaurant purchasing software that quotes every vendor for you | margin.work</title>
+  <meta name="description" content="Restaurants pay 30–40% more than they should because they only call one rep. MarginOS sends every order to every supplier who carries that SKU — automatically — so independent restaurants and bars buy at the real market price every time." />
+  <meta name="keywords" content="restaurant purchasing software, restaurant procurement software, multi-vendor food ordering, independent restaurant food cost, restaurant RFQ software, restaurant supplier price comparison, food distributor price comparison, bar inventory software, restaurant invoice reconciliation, sysco price check, us foods alternative pricing" />
   <link rel="canonical" href="https://margin.work" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="MarginOS" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://margin.work" />
-  <meta property="og:title" content="MarginOS — Catch the price drift between quote and invoice." />
-  <meta property="og:description" content="Every price your vendors quoted vs. every price they charged. Side by side. Built for independent restaurants and bars." />
+  <meta property="og:title" content="Stop paying 30–40% too much on every order. MarginOS quotes every vendor automatically." />
+  <meta property="og:description" content="Independent restaurants and bars lose real money to single-sourcing. MarginOS sends every SKU to every rep who carries it — before you approve the PO — so you always buy at the real market price." />
   <meta property="og:image" content="https://margin.work/og-image.svg" />
+  <meta property="og:image:alt" content="MarginOS — restaurant purchasing software comparing three supplier quotes side by side" />
   <meta property="og:site_name" content="MarginOS" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://margin.work" />
-  <meta name="twitter:title" content="MarginOS — Catch the price drift between quote and invoice." />
-  <meta name="twitter:description" content="Every price your vendors quoted vs. every price they charged. Side by side. Built for independent restaurants and bars." />
+  <meta name="twitter:title" content="Stop paying 30–40% too much on every order." />
+  <meta name="twitter:description" content="MarginOS quotes every vendor automatically — before you approve the PO. Built for independent restaurants and bars." />
   <meta name="twitter:image" content="https://margin.work/og-image.svg" />
+  <meta name="twitter:image:alt" content="MarginOS — three supplier quotes compared side by side" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
@@ -32,21 +38,46 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- JSON-LD Organization -->
+  <!-- JSON-LD: Organization + SoftwareApplication + FAQPage for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MarginOS",
-    "url": "https://margin.work",
-    "logo": "https://margin.work/favicon.svg",
-    "description": "MarginOS is a procurement and operations platform for independent restaurants and bars. See every price your vendors quoted vs. every price they charged. When the distributor allows a dispute, MarginOS files it for you.",
-    "founder": {
-      "@type": "Person",
-      "name": "MarginOS Founder"
-    },
-    "sameAs": [
-      "https://margin.work"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://margin.work/#organization",
+        "name": "MarginOS",
+        "url": "https://margin.work",
+        "logo": "https://margin.work/favicon.svg",
+        "description": "MarginOS is restaurant purchasing software for independent restaurants and bars. It automatically quotes every vendor who carries each SKU, so operators buy at the real market price on every order.",
+        "foundingDate": "2026",
+        "areaServed": "US",
+        "sameAs": ["https://margin.work"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://margin.work/#software",
+        "name": "MarginOS",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Restaurant Purchasing & Procurement Software",
+        "operatingSystem": "Web",
+        "url": "https://margin.work",
+        "description": "Restaurant purchasing software that quotes every supplier automatically. Send one RFQ, collect every rep's price, match the invoice against the winning quote. Built for independent restaurants and bars.",
+        "offers": [
+          {"@type": "Offer", "name": "Starter — Procurement OS", "price": "49", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "USD", "unitText": "MONTH"}},
+          {"@type": "Offer", "name": "Control — Starter + Intelligence", "price": "99", "priceCurrency": "USD", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "99", "priceCurrency": "USD", "unitText": "MONTH"}}
+        ],
+        "publisher": {"@id": "https://margin.work/#organization"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How is MarginOS different from MarginEdge or Restaurant365?", "acceptedAnswer": {"@type": "Answer", "text": "MarginEdge and Restaurant365 are built for chains, sold by enterprise reps, and start at $300+ per month with mandatory demos. MarginOS is built for independent operators, self-serve, and the supplier side is free forever — which means reps actually use it."}},
+          {"@type": "Question", "name": "Will my suppliers actually quote through MarginOS?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — because there is no login, no signup, and no app to install. Reps open a text or email link on their phone, price what they carry in two minutes, and can reply with their usual PDF. Suppliers pay nothing, ever."}},
+          {"@type": "Question", "name": "Which distributors does MarginOS work with?", "acceptedAnswer": {"@type": "Answer", "text": "Every broadliner and beverage wholesaler we have seen — Sysco, US Foods, PFG, Reinhart, Shamrock, and every regional produce, meat, bread, dairy, linen, paper, and chemical supplier our pilot operators use. If your supplier emails you a PDF or a quote, MarginOS can read it."}},
+          {"@type": "Question", "name": "How long does it take to get set up?", "acceptedAnswer": {"@type": "Answer", "text": "Onboarding takes about 15 minutes. Add your location, connect your email, and add your reps. Your first RFQ goes out the same day."}}
+        ]
+      }
     ]
   }
   </script>
@@ -109,33 +140,83 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <div class="kicker">MARGINOS &middot; THE HOSPITALITY OS</div>
+          <div class="kicker">MARGINOS &middot; RESTAURANT PURCHASING SOFTWARE</div>
           <div class="hero-pilot-badge" role="note"><span class="hero-pilot-dot" aria-hidden="true"></span> Pilot program &middot; now accepting independent restaurants in TX &amp; NE</div>
           <h1 class="hero-headline">
-            Your vendor quoted <span class="hl-price">$3.78</span>. Then they charged <span class="hl-price">$4.12</span>.
-            <span class="hero-sub">MarginOS catches the gap between what your reps quote and what your invoices charge.</span>
+            You&rsquo;re paying <span class="hl-price">30–40%</span> too much on every order. Your rep knows it.
+            <span class="hero-sub">MarginOS automatically sends every SKU to every supplier who carries it &mdash; so you buy at the real market price, not your rep&rsquo;s convenience price.</span>
           </h1>
-          <p class="hero-desc">When the distributor allows a dispute, we file it for you. When they don't, you've got receipts for the next negotiation. Built for independent restaurants and bars.</p>
+          <p class="hero-desc">One RFQ goes out. Every rep quotes on their phone in two minutes. The cheapest quote wins &mdash; by the deadline you set. Built for independent restaurants and bars that don&rsquo;t have time to call four distributors before every order.</p>
 
           <div class="hero-cta">
             <a href="https://app.margin.work/signup" class="btn btn-primary btn-lg">Start your 14-day free pilot</a>
             <a href="#video" class="link-arrow">See a 60-second demo <span aria-hidden="true">→</span></a>
           </div>
-          <p class="micro">No credit card. Cancel anytime. First drift detected in 5 minutes.</p>
+          <p class="micro">No credit card. Cancel anytime. First RFQ out the same day.</p>
         </div>
 
-        <!-- Hero visual: price-drift timeline for a single SKU over 5 weeks -->
-        <div class="hero-mock hero-drift reveal" aria-label="Price drift timeline: Chicken Breast 40lb case from Sysco, showing quoted vs. invoiced prices across five weeks">
+        <!-- Hero visual: multi-rep RFQ comparison showing every supplier's quote for a single SKU -->
+        <div class="hero-mock hero-rfq reveal" aria-label="RFQ comparison: Chicken Breast 40lb case quoted by four suppliers, with the lowest price flagged as the winning quote">
           <article class="drift-card">
             <header class="drift-head">
               <div class="drift-head-left">
                 <div class="drift-sku">CHICKEN BREAST · 40lb case</div>
-                <div class="drift-meta"><span class="vendor-blur">Sysco</span> · SKU 2184-CB40 · last 5 weeks</div>
+                <div class="drift-meta">RFQ #2184 · 4 reps quoted · closes in 0:47</div>
               </div>
               <div class="drift-badge">Live</div>
             </header>
 
-            <div class="drift-chart" role="img" aria-label="Five data points: quoted $3.78 on Mar 4, invoiced $4.12 on Mar 11 with $0.34 gap flagged, quoted $3.85 on Mar 18, invoiced $3.85 on Mar 25, quoted $3.91 on Apr 1.">
+            <div class="rfq-list" role="img" aria-label="Four rep quotes for chicken breast 40lb case: US Foods $3.62 per pound winning, PFG $3.78, Sysco $4.12, Shamrock did not carry">
+              <div class="rfq-row rfq-row-win">
+                <div class="rfq-rank">1</div>
+                <div class="rfq-sup">
+                  <span class="rfq-sup-name"><span class="vendor-blur">US Foods</span></span>
+                  <span class="rfq-sup-meta">2-day lead · Mike R.</span>
+                </div>
+                <div class="rfq-price">
+                  <span class="rfq-price-num">$3.62</span>
+                  <span class="rfq-price-unit">/ lb</span>
+                </div>
+                <span class="rfq-tag rfq-tag-win">Winning</span>
+              </div>
+              <div class="rfq-row">
+                <div class="rfq-rank">2</div>
+                <div class="rfq-sup">
+                  <span class="rfq-sup-name"><span class="vendor-blur">PFG</span></span>
+                  <span class="rfq-sup-meta">1-day lead · Janet T.</span>
+                </div>
+                <div class="rfq-price">
+                  <span class="rfq-price-num">$3.78</span>
+                  <span class="rfq-price-unit">/ lb</span>
+                </div>
+                <span class="rfq-tag rfq-tag-ok">+$0.16</span>
+              </div>
+              <div class="rfq-row">
+                <div class="rfq-rank">3</div>
+                <div class="rfq-sup">
+                  <span class="rfq-sup-name"><span class="vendor-blur">Sysco</span></span>
+                  <span class="rfq-sup-meta">3-day lead · Carlos M.</span>
+                </div>
+                <div class="rfq-price">
+                  <span class="rfq-price-num">$4.12</span>
+                  <span class="rfq-price-unit">/ lb</span>
+                </div>
+                <span class="rfq-tag rfq-tag-high">+$0.50</span>
+              </div>
+              <div class="rfq-row rfq-row-out">
+                <div class="rfq-rank">—</div>
+                <div class="rfq-sup">
+                  <span class="rfq-sup-name"><span class="vendor-blur">Shamrock</span></span>
+                  <span class="rfq-sup-meta">Declined · doesn&rsquo;t carry</span>
+                </div>
+                <div class="rfq-price rfq-price-out">
+                  <span class="rfq-price-num">—</span>
+                </div>
+                <span class="rfq-tag rfq-tag-out">Out</span>
+              </div>
+            </div>
+
+            <div class="rfq-drift-hidden" role="img" aria-hidden="true" style="display:none">
               <!-- SVG chart: axis, grid, connector lines, dots. viewBox 0 0 500 220 -->
               <svg class="drift-svg" viewBox="0 0 500 220" preserveAspectRatio="none" aria-hidden="true">
                 <!-- Horizontal grid lines -->
@@ -198,39 +279,16 @@
                 <text x="470" y="67"  text-anchor="middle" class="drift-lbl-price">$3.91</text>
               </svg>
 
-              <!-- X-axis row: kind + date under each dot -->
-              <div class="drift-xaxis" aria-hidden="true">
-                <div class="drift-xcol">
-                  <span class="drift-xlabel">Quoted</span>
-                  <span class="drift-xdate">Mar 4</span>
-                </div>
-                <div class="drift-xcol drift-xcol-danger">
-                  <span class="drift-xlabel">Invoiced</span>
-                  <span class="drift-xdate">Mar 11</span>
-                </div>
-                <div class="drift-xcol">
-                  <span class="drift-xlabel">Quoted</span>
-                  <span class="drift-xdate">Mar 18</span>
-                </div>
-                <div class="drift-xcol">
-                  <span class="drift-xlabel">Invoiced</span>
-                  <span class="drift-xdate">Mar 25</span>
-                </div>
-                <div class="drift-xcol">
-                  <span class="drift-xlabel">Quoted</span>
-                  <span class="drift-xdate">Apr 1</span>
-                </div>
-              </div>
             </div>
 
             <footer class="drift-foot">
               <div class="drift-foot-lead">
-                <span class="drift-foot-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg>
-                  Drift detected
+                <span class="drift-foot-pill rfq-foot-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                  Best price locked
                 </span>
                 <span class="drift-foot-msg">
-                  <span class="drift-foot-num">$4,200</span> in quote-to-invoice drift across <span class="drift-foot-num">12</span> items this month.
+                  You saved <span class="drift-foot-num">$0.50/lb</span> &times; <span class="drift-foot-num">40lb</span> &times; <span class="drift-foot-num">6 cases</span> = <span class="drift-foot-num">$120</span> on this SKU alone.
                 </span>
               </div>
             </footer>
@@ -245,7 +303,7 @@
       <div class="container">
         <p class="trust-label">Built for independent operators. Loved by their reps.</p>
         <div class="trust-logos" aria-label="Distributor partners">
-          <span class="trust-inline">Reads quotes and invoices from every broadliner, beverage, equipment, chemical, paper, and linen distributor — any supplier that sends you a PDF or an emailed quote.</span>
+          <span class="trust-inline">Sends RFQs to every broadliner, beverage, produce, meat, paper, chemical, and linen distributor you already use — and reads every invoice that comes back. If a supplier can text, email, or PDF, MarginOS can work with them.</span>
         </div>
       </div>
     </section>
@@ -254,10 +312,10 @@
     <section class="section section-problem" id="problem">
       <div class="container">
         <div class="eyebrow">THE PROBLEM</div>
-        <h2 class="section-heading reveal">Your rep quotes one price. The invoice charges another. Nobody's tracking the gap.</h2>
+        <h2 class="section-heading reveal">You only call one rep. He already knows that. That&rsquo;s why your chicken costs 40% more than the restaurant down the street.</h2>
         <div class="two-col reveal">
-          <p>The average restaurant processes 200+ invoices a month across 6–12 suppliers. A rep sends you a quote Monday; an invoice lands Thursday. A few cents here, a few dollars there — week over week, the spread between quoted and charged is where your margin leaks. Nobody has time to reconcile every line.</p>
-          <p>MarginOS reads every quote and every invoice the moment they arrive. We match them line by line and show you the drift. When the distributor allows a dispute, we file it for you. When they don't, you've got receipts for the next negotiation.</p>
+          <p>Independent operators don&rsquo;t price-shop every order because there&rsquo;s no time to. Calling four reps, waiting for callbacks, converting case sizes, comparing line by line &mdash; it&rsquo;s an hour of math before you&rsquo;ve even placed the PO. So you don&rsquo;t. You order from whoever answered last time. Your reps know this. They price accordingly. <a href="https://squareup.com/us/en/the-bottom-line/inside-square/restaurant-procurement-order-guide" rel="nofollow noopener">Price differences of 30–40% on identical items go unseen every week</a> &mdash; not because operators don&rsquo;t care, but because the math is impossible at service speed.</p>
+          <p>MarginOS does the calling for you. Send one RFQ from your phone. Every rep who carries those SKUs gets a text with a link &mdash; no login, no app. They price in two minutes. You see every quote, side by side, with the cheapest winner flagged. Award the PO with one tap. Next week, repeat. Every order, your real market price. The first time most operators have ever had competitive bids on their ingredients.</p>
         </div>
       </div>
     </section>
@@ -265,28 +323,28 @@
     <!-- ──────────────────── SECTION 3 · VIDEO ──────────────────── -->
     <section class="section section-video" id="video">
       <div class="container center">
-        <h2 class="section-heading reveal">See it work in 60 seconds.</h2>
-        <p class="section-sub reveal">Upload one quote. Upload one invoice. Watch MarginOS match them line by line and surface every price that drifted.</p>
+        <h2 class="section-heading reveal">See your first RFQ go out in 60 seconds.</h2>
+        <p class="section-sub reveal">Pick your order. MarginOS texts every rep who carries those SKUs. Quotes come back in minutes &mdash; side by side, best price flagged.</p>
 
         <button class="video-card reveal" id="videoPlayBtn" aria-label="Play 60-second product demo">
           <div class="video-still video-still-gradient" aria-hidden="true">
             <!-- Faux still frame: replica of product UI behind gradient -->
             <div class="video-still-inner">
               <div class="video-still-line">
-                <span class="num">TOMATO 25lb case</span>
-                <span class="num danger">+$6.50</span>
-              </div>
-              <div class="video-still-bar"><span style="width:82%"></span></div>
-              <div class="video-still-line">
-                <span class="num">RIBEYE 12oz</span>
-                <span class="num danger">+$2.20</span>
-              </div>
-              <div class="video-still-bar"><span style="width:64%"></span></div>
-              <div class="video-still-line">
-                <span class="num" style="color:var(--green-primary)">Drift flagged · <span class="vendor-blur">Sysco</span></span>
-                <span class="num" style="color:var(--green-primary)">12 items · $4,200</span>
+                <span class="num"><span class="vendor-blur">US Foods</span> · $3.62/lb</span>
+                <span class="num" style="color:var(--green-primary)">★ Winning</span>
               </div>
               <div class="video-still-bar"><span style="width:94%; background:var(--green-primary)"></span></div>
+              <div class="video-still-line">
+                <span class="num"><span class="vendor-blur">PFG</span> · $3.78/lb</span>
+                <span class="num">+$0.16</span>
+              </div>
+              <div class="video-still-bar"><span style="width:74%"></span></div>
+              <div class="video-still-line">
+                <span class="num"><span class="vendor-blur">Sysco</span> · $4.12/lb</span>
+                <span class="num danger">+$0.50</span>
+              </div>
+              <div class="video-still-bar"><span style="width:50%"></span></div>
             </div>
           </div>
           <span class="play-btn" aria-hidden="true">
@@ -300,14 +358,15 @@
     <!-- ──────────────────── SECTION 4 · PRODUCT GLIMPSE ──────────────────── -->
     <section class="section section-product" id="product">
       <div class="container">
-        <h2 class="section-heading center reveal">Compare · Decide · Catch the drift.</h2>
+        <h2 class="section-heading center reveal">Source the best price. Award the PO. Catch the overcharge.</h2>
+        <p class="section-sub center reveal">A full purchasing loop in three screens. Nothing to learn. Your reps already know how to text.</p>
 
         <div class="product-grid">
-          <!-- Card 1 · COMPARE -->
+          <!-- Card 1 · SOURCE -->
           <article class="product-card reveal">
-            <div class="pc-label">COMPARE</div>
-            <h3 class="pc-title">Compare every supplier side by side</h3>
-            <p class="pc-body">One RFQ. Every rep quotes on their phone in 2 minutes. All quotes land side by side — no more spreadsheet chaos.</p>
+            <div class="pc-label">SOURCE</div>
+            <h3 class="pc-title">Every rep quotes every order, automatically</h3>
+            <p class="pc-body">Build your order once. MarginOS texts every supplier who carries those SKUs. Quotes arrive in minutes &mdash; side by side, cheapest winner flagged. You award the PO with one tap.</p>
             <div class="pc-mock" aria-label="Three supplier quotes compared, US Foods recommended">
               <div class="pc-mock-row pc-mock-header">
                 <span>SUPPLIER</span>
@@ -332,7 +391,7 @@
           <article class="product-card reveal">
             <div class="pc-label">DECIDE</div>
             <h3 class="pc-title">Know exactly why a supplier won</h3>
-            <p class="pc-body">Every recommendation shows its math. Cheapest that arrives by Friday, fewest days to delivery, best fill rate. Never award on a gut feel again.</p>
+            <p class="pc-body">Every recommendation shows its math &mdash; cheapest price, fastest lead time, highest fill rate. Override for a favorite rep whenever you want. You&rsquo;re always the one deciding.</p>
             <div class="pc-mock pc-mock-reason" aria-label="Recommendation reasoning">
               <div class="reason-top">
                 <span class="dot"></span>
@@ -352,8 +411,8 @@
           <!-- Card 3 · CATCH -->
           <article class="product-card reveal">
             <div class="pc-label">CATCH</div>
-            <h3 class="pc-title">See every quote-to-invoice gap</h3>
-            <p class="pc-body">MarginOS matches every invoice line against the quote your rep sent. When the charged price drifts from the quoted price, you see it the moment it lands.</p>
+            <h3 class="pc-title">Catch the overcharge when the invoice lands</h3>
+            <p class="pc-body">Even after you bought at the winning price, vendors still make mistakes. MarginOS matches every invoice line against the quote you awarded. When the charged price doesn&rsquo;t match, it&rsquo;s flagged &mdash; so you file the dispute or keep the receipt.</p>
             <div class="pc-mock pc-mock-alert" aria-label="Quote-to-invoice drift alert">
               <div class="alert-row">
                 <span class="alert-emoji" aria-hidden="true">⚠</span>
@@ -371,21 +430,9 @@
     <!-- ──────────────────── SECTION 5 · FEATURES ──────────────────── -->
     <section class="section section-features section-alt">
       <div class="container">
-        <h2 class="section-heading center reveal">Everything an operator needs. Nothing a consultant wanted.</h2>
+        <h2 class="section-heading center reveal">Everything an independent operator needs. Nothing a consultant wanted.</h2>
 
         <div class="feature-grid">
-          <div class="feature reveal">
-            <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6 3h9l5 5v13H6z"/>
-                <path d="M15 3v5h5"/>
-                <path d="M9 13h7M9 17h7M9 9h3"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Quote-to-invoice matching on autopilot</h3>
-            <p class="feature-body">Upload a PDF or connect your email. MarginOS reads every line item on quotes and invoices, matches them automatically, and surfaces every price that drifted.</p>
-          </div>
-
           <div class="feature reveal">
             <div class="feature-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -395,7 +442,30 @@
               </svg>
             </div>
             <h3 class="feature-title">No-login supplier portal</h3>
-            <p class="feature-body">Reps open a text link, price what they carry, decline the rest. No app, no signup, no friction. Suppliers free forever.</p>
+            <p class="feature-body">Reps open a text link on their phone, price what they carry, decline the rest. No app. No signup. No friction. Suppliers free forever &mdash; which is why they actually respond.</p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2v20M5 9h14M5 15h14"/>
+                <circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Automatic multi-vendor RFQ</h3>
+            <p class="feature-body">Every order auto-routes to every rep who carries each SKU. Lead time, minimum order, and delivery window all priced in. The cheapest quote that meets your deadline wins.</p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 3h9l5 5v13H6z"/>
+                <path d="M15 3v5h5"/>
+                <path d="M9 13h7M9 17h7M9 9h3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Invoice reconciliation, automatic</h3>
+            <p class="feature-body">Forward the invoice, snap a photo, or connect your email. MarginOS matches every line against the quote you awarded and flags any overcharge. When the distributor allows a dispute, we draft it for you.</p>
           </div>
 
           <div class="feature reveal">
@@ -405,8 +475,30 @@
                 <path d="M14 7h6v6"/>
               </svg>
             </div>
-            <h3 class="feature-title">Real-time price intelligence</h3>
-            <p class="feature-body">Compare your prices against other operators in your region. Know when you're getting a good deal before you sign the PO.</p>
+            <h3 class="feature-title">Regional price intelligence</h3>
+            <p class="feature-body">See how your prices stack up against other operators in your metro &mdash; anonymized, aggregated, never identifying. Know when a rep is quoting you fair before you sign the PO.</p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20v-6M12 14l-3-3m3 3l3-3"/>
+                <path d="M4 4h16v10H4z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fifteen-minute onboarding</h3>
+            <p class="feature-body">Add your location. Connect your email. Add your reps. Your first RFQ goes out the same day. No 30-day implementation. No $500 setup fee.</p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Priced like a single-location tool</h3>
+            <p class="feature-body">$49/mo. Month to month. Suppliers always free. Compare to MarginEdge ($350+/mo, annual contract) or Restaurant365 ($499+/mo, enterprise) &mdash; then stop comparing.</p>
           </div>
         </div>
       </div>
@@ -494,8 +586,8 @@
     <!-- ──────────────────── SECTION 8 · CLOSE ──────────────────── -->
     <section class="section section-close" id="close">
       <div class="container center">
-        <h2 class="section-heading reveal">Catch the drift. Start tomorrow.</h2>
-        <p class="section-sub reveal">Upload one quote and one invoice. See where they disagree. Takes five minutes. Your first RFQ goes out before you pour your afternoon coffee.</p>
+        <h2 class="section-heading reveal">Stop paying your rep&rsquo;s convenience price. Start tomorrow.</h2>
+        <p class="section-sub reveal">Add your location. Add your reps. Send your first RFQ before you pour afternoon coffee. Every order after that goes out to every supplier automatically.</p>
         <a href="https://app.margin.work/signup" class="btn btn-primary btn-lg reveal">Start your 14-day free pilot</a>
         <p class="micro">No credit card. No demo required. Cancel anytime.</p>
       </div>

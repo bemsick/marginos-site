@@ -1494,6 +1494,120 @@ g.drift-lbl-danger text { fill: var(--danger); }
   color: var(--ink);
 }
 
+/* ─── Hero RFQ list (multi-rep quote comparison) ─── */
+.hero-rfq {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+.rfq-list {
+  padding: 10px 14px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rfq-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg-elev);
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.rfq-row-win {
+  border-color: var(--green-primary);
+  background: linear-gradient(0deg, rgba(22,163,74,0.06), rgba(22,163,74,0.06)), var(--bg-elev);
+  box-shadow: 0 0 0 1px var(--green-primary) inset;
+}
+.rfq-row-out {
+  opacity: 0.55;
+  background: var(--bg-subtle);
+}
+.rfq-rank {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-align: center;
+  font-feature-settings: 'tnum','zero';
+}
+.rfq-row-win .rfq-rank { color: var(--green-primary); }
+.rfq-sup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.rfq-sup-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rfq-sup-meta {
+  font-size: 12px;
+  color: var(--ink-3);
+  line-height: 1.35;
+}
+.rfq-price {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum','zero';
+}
+.rfq-price-num {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.rfq-row-win .rfq-price-num { color: var(--green-primary); }
+.rfq-price-unit {
+  font-size: 11px;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.rfq-price-out .rfq-price-num { color: var(--ink-3); font-weight: 500; }
+.rfq-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.rfq-tag-win {
+  color: var(--bg-elev);
+  background: var(--green-primary);
+}
+.rfq-tag-ok {
+  color: var(--ink-2);
+  background: var(--bg-subtle);
+  border: 1px solid var(--line);
+}
+.rfq-tag-high {
+  color: var(--danger);
+  background: rgba(220,38,38,0.09);
+}
+.rfq-tag-out {
+  color: var(--ink-3);
+  background: transparent;
+  border: 1px dashed var(--line);
+}
+.rfq-foot-pill {
+  color: var(--green-primary) !important;
+  background: var(--green-soft) !important;
+}
+
 /* Footer legal line */
 .footer-legal {
   font-size: 12.5px;
