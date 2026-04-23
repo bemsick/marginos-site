@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Product tour — How MarginOS works | margin.work</title>
+  <meta name="description" content="See MarginOS in action: multi-vendor RFQs, no-login supplier quoting, one-tap PO awards, invoice drift alerts, and regional price benchmarks." />
+  <link rel="canonical" href="https://margin.work/product" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://margin.work/product" />
+  <meta property="og:title" content="MarginOS product tour — one RFQ, every supplier, side-by-side quotes." />
+  <meta property="og:description" content="Six screens that replace the spreadsheet, the phone tree, and the gut-feel order. See how MarginOS turns procurement into a two-minute decision." />
+  <meta property="og:image" content="https://margin.work/og-image.svg" />
+  <meta property="og:image:alt" content="MarginOS product tour — multi-vendor RFQ, quote comparison, invoice drift alerts" />
+  <meta property="og:site_name" content="MarginOS" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://margin.work/product" />
+  <meta name="twitter:title" content="MarginOS product tour — see how it works." />
+  <meta name="twitter:description" content="One RFQ. Every supplier. Side-by-side quotes. Invoice drift caught automatically." />
+  <meta name="twitter:image" content="https://margin.work/og-image.svg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MarginOS",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Restaurant Purchasing & Procurement Software",
+    "operatingSystem": "Web",
+    "url": "https://margin.work/product",
+    "description": "Restaurant purchasing software that quotes every supplier automatically. Send one RFQ, collect every rep's price, match the invoice against the winning quote.",
+    "featureList": [
+      "Multi-vendor RFQ",
+      "No-login supplier quote portal",
+      "Side-by-side quote comparison",
+      "One-tap PO awards",
+      "Invoice reconciliation with drift alerts",
+      "Regional price benchmarks"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "49",
+      "priceCurrency": "USD",
+      "url": "https://app.margin.work/signup"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="MarginOS home">
+        <svg class="logo-mark" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2"  y="14" width="4" height="8"  rx="1" fill="currentColor"/>
+          <rect x="8"  y="10" width="4" height="12" rx="1" fill="currentColor"/>
+          <rect x="14" y="6"  width="4" height="16" rx="1" fill="currentColor"/>
+          <rect x="20" y="2"  width="2" height="20" rx="1" fill="currentColor" opacity=".55"/>
+        </svg>
+        <span class="logo-word">MarginOS</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="/product" aria-current="page" class="is-active">Product</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/for-operators">For operators</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/for-reps">For reps</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="link-muted" href="https://app.margin.work/login">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="https://app.margin.work/signup">Get started</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-inner">
+      <a href="/product">Product</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/for-operators">For operators</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/for-reps">For reps</a>
+      <a class="mobile-nav-signin" href="https://app.margin.work/login">Sign in</a>
+      <a class="btn btn-primary" href="https://app.margin.work/signup">Get started</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ─── Page hero ─── -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <div class="page-crumb">
+            <a href="/">Home</a>
+            <span class="sep">/</span>
+            <span>Product</span>
+            <span class="sep">·</span>
+            <span style="color: var(--ink-3);">How MarginOS works</span>
+          </div>
+          <h1>One RFQ, every supplier, side-by-side quotes &mdash; in six screens.</h1>
+          <p class="lede">From request to awarded PO to reconciled invoice, here&rsquo;s every step the system takes for you. No screenshots &mdash; every mock below is the real component your reps see.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Step 1 · Send one RFQ ─── -->
+    <section class="tour-section">
+      <div class="container">
+        <div class="tour-grid reveal">
+          <div class="tour-copy">
+            <div class="tour-step-num">01 &middot; SOURCE</div>
+            <h2>Send one RFQ to every supplier.</h2>
+            <p>Build your order once. MarginOS knows which reps carry which SKUs and routes the RFQ only to the ones who can quote. No calling four reps. No mystery-meat spreadsheets. No missed cutoffs.</p>
+          </div>
+
+          <div class="tour-mock">
+            <div class="mock-ui" aria-label="Supplier picker with four category-tagged vendors, three selected">
+              <div class="mock-ui-head">
+                <div>
+                  <div class="mock-ui-title">NEW RFQ &middot; #2184</div>
+                  <div class="mock-ui-meta">Route to suppliers who carry these SKUs</div>
+                </div>
+                <span class="mock-ui-badge">3 of 4</span>
+              </div>
+              <div class="mock-ui-body">
+                <div class="sup-pick-list">
+                  <div class="sup-pick-row selected">
+                    <span class="sup-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                    <span>
+                      <span class="sup-name">US Foods</span>
+                      <span class="sup-cat">Broadline</span>
+                    </span>
+                    <span class="sup-reps">Mike R.</span>
+                  </div>
+                  <div class="sup-pick-row selected">
+                    <span class="sup-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                    <span>
+                      <span class="sup-name">PFG</span>
+                      <span class="sup-cat">Broadline</span>
+                    </span>
+                    <span class="sup-reps">Janet T.</span>
+                  </div>
+                  <div class="sup-pick-row selected">
+                    <span class="sup-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                    <span>
+                      <span class="sup-name">Sysco</span>
+                      <span class="sup-cat">Broadline</span>
+                    </span>
+                    <span class="sup-reps">Carlos M.</span>
+                  </div>
+                  <div class="sup-pick-row">
+                    <span class="sup-check"></span>
+                    <span>
+                      <span class="sup-name">Shamrock</span>
+                      <span class="sup-cat">Produce</span>
+                    </span>
+                    <span class="sup-reps">Not carrying</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-ui-foot">
+                <span style="font-family: var(--font-mono); font-size:12px; color: var(--ink-3);">12 SKUs &middot; closes in 2 hours</span>
+                <span style="flex:1"></span>
+                <span style="font-family: var(--font-mono); font-size:12px; color: var(--green-primary); font-weight:600;">Send RFQ →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Step 2 · No-login quoting ─── -->
+    <section class="tour-section section-alt">
+      <div class="container">
+        <div class="tour-grid reverse reveal">
+          <div class="tour-copy">
+            <div class="tour-step-num">02 &middot; RESPOND</div>
+            <h2>Suppliers quote in two minutes.</h2>
+            <p>Your rep opens a text on their phone, taps through a line-item form, and hits submit. No login. No signup. No app. They can decline lines they don&rsquo;t carry and still win the ones they do. Two minutes, max.</p>
+          </div>
+
+          <div class="tour-mock">
+            <div class="mock-ui rep-portal" aria-label="No-login rep portal showing six line items, three priced by the rep">
+              <div class="mock-ui-head">
+                <div>
+                  <div class="mock-ui-title">QUOTE REQUEST &middot; RFQ #2184</div>
+                  <div class="mock-ui-meta">From <strong style="color: var(--ink);">Westside Kitchen</strong> &middot; closes 4:30pm</div>
+                </div>
+                <span class="mock-ui-badge" style="color: var(--ink-3); background: var(--bg-subtle);">Rep view</span>
+              </div>
+              <div class="mock-ui-body">
+                <div class="rep-portal-row">
+                  <span>
+                    <span class="sku">Chicken Breast, 40lb case</span><br>
+                    <span class="qty">6 cases &middot; needed Apr 28</span>
+                  </span>
+                  <span class="rep-portal-input filled"><span class="pre">$</span>3.62<span class="pre">/lb</span></span>
+                  <span></span>
+                </div>
+                <div class="rep-portal-row">
+                  <span>
+                    <span class="sku">Romaine, 24ct case</span><br>
+                    <span class="qty">4 cases &middot; needed Apr 28</span>
+                  </span>
+                  <span class="rep-portal-input filled"><span class="pre">$</span>22.40<span class="pre">/cs</span></span>
+                  <span></span>
+                </div>
+                <div class="rep-portal-row">
+                  <span>
+                    <span class="sku">Ribeye, choice, 10lb avg</span><br>
+                    <span class="qty">3 cases &middot; needed Apr 29</span>
+                  </span>
+                  <span class="rep-portal-input filled"><span class="pre">$</span>15.20<span class="pre">/lb</span></span>
+                  <span></span>
+                </div>
+                <div class="rep-portal-row">
+                  <span>
+                    <span class="sku">Lobster tails, 4oz, 10lb case</span><br>
+                    <span class="qty">2 cases &middot; needed Apr 29</span>
+                  </span>
+                  <span class="rep-portal-input" style="color: var(--ink-muted);">$&mdash;.&mdash;&mdash;</span>
+                  <span class="rep-portal-decline">Not carrying</span>
+                </div>
+                <button class="rep-portal-submit" type="button" aria-disabled="true">Submit quote &middot; 3 of 4 priced</button>
+              </div>
+              <div class="mock-ui-foot" style="justify-content: center; color: var(--green-primary); font-family: var(--font-mono); font-size: 12px; font-weight: 600;">
+                No login. No signup. Two minutes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Step 3 · Side-by-side comparison (reuse homepage hero-rfq) ─── -->
+    <section class="tour-section">
+      <div class="container">
+        <div class="tour-grid reveal">
+          <div class="tour-copy">
+            <div class="tour-step-num">03 &middot; COMPARE</div>
+            <h2>See every quote side-by-side.</h2>
+            <p>Four reps responded. MarginOS ranks them by true delivered cost &mdash; line-level, with lead time and minimum order baked in. The winning quote is flagged. The math is all there. Override if you want to.</p>
+          </div>
+
+          <div class="tour-mock">
+            <article class="drift-card" aria-label="RFQ comparison: Chicken Breast 40lb case, four rep quotes, US Foods winning at $3.62">
+              <header class="drift-head">
+                <div class="drift-head-left">
+                  <div class="drift-sku">CHICKEN BREAST &middot; 40lb case</div>
+                  <div class="drift-meta">RFQ #2184 &middot; 4 reps quoted &middot; closed</div>
+                </div>
+                <div class="drift-badge">Live</div>
+              </header>
+
+              <div class="rfq-list">
+                <div class="rfq-row rfq-row-win">
+                  <div class="rfq-rank">1</div>
+                  <div class="rfq-sup">
+                    <span class="rfq-sup-name">US Foods</span>
+                    <span class="rfq-sup-meta">2-day lead &middot; Mike R.</span>
+                  </div>
+                  <div class="rfq-price">
+                    <span class="rfq-price-num">$3.62</span>
+                    <span class="rfq-price-unit">/ lb</span>
+                  </div>
+                  <span class="rfq-tag rfq-tag-win">Winning</span>
+                </div>
+                <div class="rfq-row">
+                  <div class="rfq-rank">2</div>
+                  <div class="rfq-sup">
+                    <span class="rfq-sup-name">PFG</span>
+                    <span class="rfq-sup-meta">1-day lead &middot; Janet T.</span>
+                  </div>
+                  <div class="rfq-price">
+                    <span class="rfq-price-num">$3.78</span>
+                    <span class="rfq-price-unit">/ lb</span>
+                  </div>
+                  <span class="rfq-tag rfq-tag-ok">+$0.16</span>
+                </div>
+                <div class="rfq-row">
+                  <div class="rfq-rank">3</div>
+                  <div class="rfq-sup">
+                    <span class="rfq-sup-name">Sysco</span>
+                    <span class="rfq-sup-meta">3-day lead &middot; Carlos M.</span>
+                  </div>
+                  <div class="rfq-price">
+                    <span class="rfq-price-num">$4.12</span>
+                    <span class="rfq-price-unit">/ lb</span>
+                  </div>
+                  <span class="rfq-tag rfq-tag-high">+$0.50</span>
+                </div>
+                <div class="rfq-row rfq-row-out">
+                  <div class="rfq-rank">&mdash;</div>
+                  <div class="rfq-sup">
+                    <span class="rfq-sup-name">Shamrock</span>
+                    <span class="rfq-sup-meta">Declined &middot; doesn&rsquo;t carry</span>
+                  </div>
+                  <div class="rfq-price rfq-price-out">
+                    <span class="rfq-price-num">&mdash;</span>
+                  </div>
+                  <span class="rfq-tag rfq-tag-out">Out</span>
+                </div>
+              </div>
+
+              <footer class="drift-foot">
+                <div class="drift-foot-lead">
+                  <span class="drift-foot-pill rfq-foot-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                    Best price locked
+                  </span>
+                  <span class="drift-foot-msg">
+                    You saved <span class="drift-foot-num">$0.50/lb</span> &times; <span class="drift-foot-num">40lb</span> &times; <span class="drift-foot-num">6 cases</span> = <span class="drift-foot-num">$120</span> on this SKU alone.
+                  </span>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Step 4 · Award PO ─── -->
+    <section class="tour-section section-alt">
+      <div class="container">
+        <div class="tour-grid reverse reveal">
+          <div class="tour-copy">
+            <div class="tour-step-num">04 &middot; AWARD</div>
+            <h2>Award the PO with one tap.</h2>
+            <p>Review the winning quote, adjust quantities if you need to, and tap Award. The PO is sent to the rep, logged to your order history, and handed off to invoice matching. You&rsquo;re done in about thirty seconds.</p>
+          </div>
+
+          <div class="tour-mock">
+            <div class="mock-ui" aria-label="Purchase order preview with Award button highlighted, routed to US Foods">
+              <div class="po-preview-head">
+                <div class="po-preview-title">Purchase Order &middot; PO-1084</div>
+                <div class="po-preview-sup">US Foods</div>
+                <div class="po-preview-total">Mike R. &middot; 2-day lead &middot; <span class="num">$1,428.80</span> total</div>
+              </div>
+              <div class="po-preview-lines">
+                <div class="po-line">
+                  <span>Chicken Breast 40lb &times; 6</span>
+                  <span class="num">$868.80</span>
+                </div>
+                <div class="po-line">
+                  <span>Romaine 24ct &times; 4</span>
+                  <span class="num">$89.60</span>
+                </div>
+                <div class="po-line">
+                  <span>Ribeye choice 10lb &times; 3</span>
+                  <span class="num">$456.00</span>
+                </div>
+                <div class="po-line" style="border-top: 1px solid var(--line); margin-top: 6px; padding-top: 12px; font-weight: 600; color: var(--ink);">
+                  <span>Subtotal</span>
+                  <span class="num">$1,414.40</span>
+                </div>
+                <div class="po-line" style="border-bottom: 0;">
+                  <span>Fuel surcharge</span>
+                  <span class="num">$14.40</span>
+                </div>
+              </div>
+              <div class="po-award-bar">
+                <button class="po-award-btn" type="button" aria-disabled="true">Award PO</button>
+                <div class="po-award-note">Will be sent<br>to US Foods</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Step 5 · Invoice drift ─── -->
+    <section class="tour-section">
+      <div class="container">
+        <div class="tour-grid reveal">
+          <div class="tour-copy">
+            <div class="tour-step-num">05 &middot; RECONCILE</div>
+            <h2>Invoice lands, drift caught automatically.</h2>
+            <p>Forward the invoice or let our inbox integration pull it in. MarginOS matches every line to the quote you awarded. If a price doesn&rsquo;t match, it&rsquo;s flagged before you pay. We draft the dispute email with the quote attached.</p>
+          </div>
+
+          <div class="tour-mock">
+            <div class="mock-ui" aria-label="Invoice line item flagged as overcharge: quoted $3.62 but charged $3.78 per pound">
+              <div class="mock-ui-head">
+                <div>
+                  <div class="mock-ui-title">INVOICE &middot; US-INV-44821</div>
+                  <div class="mock-ui-meta">US Foods &middot; delivered Apr 28 &middot; <span class="num" style="font-family: var(--font-mono);">$1,466.40</span></div>
+                </div>
+                <span class="mock-ui-badge" style="color: var(--danger); background: rgba(220,38,38,0.09);">1 flag</span>
+              </div>
+              <div class="mock-ui-body" style="padding-top: 8px; padding-bottom: 8px;">
+                <div class="invdrift-row">
+                  <div>
+                    <div class="invdrift-sku">Chicken Breast, 40lb case</div>
+                    <div class="invdrift-meta">6 cases &middot; PO-1084</div>
+                    <span class="invdrift-flag">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                      Overcharge
+                    </span>
+                  </div>
+                  <div class="invdrift-prices">
+                    <div class="invdrift-quoted">Quoted <span class="num">$3.62/lb</span></div>
+                    <div class="invdrift-charged">Charged <span class="num">$3.78/lb</span></div>
+                  </div>
+                </div>
+                <div class="invdrift-row">
+                  <div>
+                    <div class="invdrift-sku">Romaine, 24ct case</div>
+                    <div class="invdrift-meta">4 cases &middot; PO-1084</div>
+                  </div>
+                  <div class="invdrift-prices">
+                    <div class="invdrift-quoted">Quoted <span class="num">$22.40/cs</span></div>
+                    <div style="color: var(--green-primary); font-weight: 600;">Matched <span class="num" style="color: var(--green-primary);">$22.40/cs</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="invdrift-reclaim">
+                <strong>+<span class="num">$0.16</span> &times; <span class="num">40lb</span> &times; <span class="num">6 cases</span> = <span class="num">$38.40</span> reclaimable.</strong> Dispute drafted &mdash; review and send.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Step 6 · Benchmarks ─── -->
+    <section class="tour-section section-alt">
+      <div class="container">
+        <div class="tour-grid reverse reveal">
+          <div class="tour-copy">
+            <div class="tour-step-num">06 &middot; BENCHMARK</div>
+            <h2>Know your real market price, every week.</h2>
+            <p>See how your prices compare to other operators in your metro &mdash; anonymized, aggregated, per SKU. The first time you see you&rsquo;re below the median, you&rsquo;ll know exactly what MarginOS is worth.</p>
+          </div>
+
+          <div class="tour-mock">
+            <div class="mock-ui" aria-label="Regional price benchmark card showing your chicken breast price is below the metro median">
+              <div class="bench-head">
+                <div class="bench-sku">Chicken Breast, 40lb case</div>
+                <div class="bench-metro">Austin, TX metro &middot; 43 operators &middot; week of Apr 28</div>
+              </div>
+              <div class="bench-bars">
+                <div class="bench-row">
+                  <span class="bench-row-label">You</span>
+                  <span class="bench-row-track"><span class="bench-row-fill you" style="width: 55%;"></span></span>
+                  <span class="bench-row-price you">$3.62</span>
+                </div>
+                <div class="bench-row">
+                  <span class="bench-row-label">Metro median</span>
+                  <span class="bench-row-track"><span class="bench-row-fill median" style="width: 68%;"></span></span>
+                  <span class="bench-row-price">$3.78</span>
+                </div>
+                <div class="bench-row">
+                  <span class="bench-row-label">Top 25%</span>
+                  <span class="bench-row-track"><span class="bench-row-fill top" style="width: 88%;"></span></span>
+                  <span class="bench-row-price">$4.12</span>
+                </div>
+              </div>
+              <div class="bench-verdict">
+                <strong>You&rsquo;re below market</strong> &mdash; <span class="num">$0.16/lb</span> under the Austin median. At 6 cases/week that&rsquo;s <span class="num">$38/wk</span> &middot; <span class="num">$1,976/yr</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Close ─── -->
+    <section class="close-strip">
+      <div class="container">
+        <h2>Six screens. Fifteen-minute onboarding. First RFQ today.</h2>
+        <p class="section-sub center" style="margin: 0 auto 28px;">No credit card. No demo required. No implementation project.</p>
+        <div class="close-actions">
+          <a href="https://app.margin.work/signup" class="btn btn-primary btn-lg">Start your 14-day free pilot</a>
+          <a href="/pricing" class="link-arrow">See pricing <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="/" aria-label="MarginOS home">
+          <svg class="logo-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2"  y="14" width="4" height="8"  rx="1" fill="currentColor"/>
+            <rect x="8"  y="10" width="4" height="12" rx="1" fill="currentColor"/>
+            <rect x="14" y="6"  width="4" height="16" rx="1" fill="currentColor"/>
+            <rect x="20" y="2"  width="2" height="20" rx="1" fill="currentColor" opacity=".55"/>
+          </svg>
+          <span class="logo-word">MarginOS</span>
+        </a>
+        <p class="footer-tag">The Hospitality OS. Starting with procurement.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <div class="footer-h">Product</div>
+          <ul>
+            <li><a href="/product">Product tour</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/for-operators">For operators</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-h">Suppliers</div>
+          <ul>
+            <li><a href="/for-reps">For Reps</a></li>
+            <li><a href="https://app.margin.work/supplier/login">Rep sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-h">Company</div>
+          <ul>
+            <li><a href="mailto:blake@margin.work">Contact</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">&copy; 2026 MarginOS &middot; margin.work</p>
+        <p class="footer-disclaimer">MarginOS is an independent platform and is not affiliated with, endorsed by, or sponsored by any distributor. All third-party names and trademarks are the property of their respective owners and are used for descriptive purposes only. Vendor names shown in product previews are illustrative.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
