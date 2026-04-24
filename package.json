@@ -1,0 +1,9 @@
+{
+  "name": "marginos-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MarginOS marketing site — static HTML/CSS/JS with serverless pilot application endpoint.",
+  "dependencies": {
+    "resend": "^4.0.1"
+  }
+}

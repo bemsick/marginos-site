@@ -57,7 +57,7 @@
       "@type": "Offer",
       "price": "49",
       "priceCurrency": "USD",
-      "url": "https://app.margin.work/signup"
+      "url": "https://margin.work/pricing"
     }
   }
   </script>
@@ -88,7 +88,7 @@
 
       <div class="header-actions">
         <a class="link-muted" href="https://app.margin.work/login">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="https://app.margin.work/signup">Get started</a>
+        <button type="button" class="btn btn-primary btn-sm js-apply-pilot">Apply for the pilot</button>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
@@ -107,7 +107,7 @@
       <a href="/#faq">FAQ</a>
       <a href="/for-reps">For reps</a>
       <a class="mobile-nav-signin" href="https://app.margin.work/login">Sign in</a>
-      <a class="btn btn-primary" href="https://app.margin.work/signup">Get started</a>
+      <button type="button" class="btn btn-primary js-apply-pilot">Apply for the pilot</button>
     </div>
   </div>
 
@@ -497,7 +497,7 @@
         <h2>Six screens. Fifteen-minute onboarding. First RFQ today.</h2>
         <p class="section-sub center" style="margin: 0 auto 28px;">No credit card. No demo required. No implementation project.</p>
         <div class="close-actions">
-          <a href="https://app.margin.work/signup" class="btn btn-primary btn-lg">Start your 14-day free pilot</a>
+          <button type="button" class="btn btn-primary btn-lg js-apply-pilot">Apply for the pilot</button>
           <a href="/pricing" class="link-arrow">See pricing <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -554,6 +554,105 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- Pilot application modal -->
+  <div class="pilot-modal" id="pilotModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pilotModalTitle">
+    <div class="pilot-modal-backdrop" data-pilot-close></div>
+    <div class="pilot-modal-frame">
+      <button class="pilot-modal-close" data-pilot-close aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+      <div class="pilot-modal-body">
+        <div class="pilot-modal-header">
+          <div class="pilot-modal-eyebrow">PILOT PROGRAM &middot; 60 DAYS FREE</div>
+          <h2 class="pilot-modal-title" id="pilotModalTitle">Apply for the pilot</h2>
+          <p class="pilot-modal-lede">Blake reads every application personally and replies within 24 hours. No bots, no sales dev.</p>
+        </div>
+        <form class="pilot-form" id="pilotForm" novalidate>
+          <div class="pilot-field">
+            <label for="pf-name">Your name<span class="req">*</span></label>
+            <input id="pf-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="pilot-field">
+            <label for="pf-business">Restaurant or bar name<span class="req">*</span></label>
+            <input id="pf-business" name="business_name" type="text" required autocomplete="organization">
+          </div>
+          <div class="pilot-field">
+            <label for="pf-role">Your role<span class="req">*</span></label>
+            <select id="pf-role" name="role" required>
+              <option value="">Select one</option>
+              <option>Owner</option>
+              <option>Operator/GM</option>
+              <option>Executive Chef</option>
+              <option>Ops Manager</option>
+              <option>Beverage Director</option>
+              <option>Finance</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="pilot-field">
+            <label for="pf-locations">How many locations?<span class="req">*</span></label>
+            <select id="pf-locations" name="location_count" required>
+              <option value="">Select one</option>
+              <option>1</option>
+              <option>2&ndash;5</option>
+              <option>6&ndash;10</option>
+              <option>11+</option>
+            </select>
+          </div>
+          <div class="pilot-field">
+            <label for="pf-distributor">Main distributor today<span class="req">*</span></label>
+            <input id="pf-distributor" name="main_distributor" type="text" required placeholder="e.g., Sysco, US Foods, Breakthru">
+          </div>
+          <div class="pilot-field">
+            <label for="pf-volume">Weekly invoice volume<span class="req">*</span></label>
+            <select id="pf-volume" name="weekly_invoice_volume" required>
+              <option value="">Select one</option>
+              <option>&lt;10 / wk</option>
+              <option>10&ndash;30 / wk</option>
+              <option>30&ndash;75 / wk</option>
+              <option>75+ / wk</option>
+            </select>
+          </div>
+          <div class="pilot-field">
+            <label for="pf-timeline">Timeline<span class="req">*</span></label>
+            <select id="pf-timeline" name="timeline" required>
+              <option value="">Select one</option>
+              <option>This week</option>
+              <option>Next 30 days</option>
+              <option>Next 60 days</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+          <div class="pilot-field">
+            <label for="pf-email">Best email<span class="req">*</span></label>
+            <input id="pf-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="pilot-field">
+            <label for="pf-phone">Best phone</label>
+            <input id="pf-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="pilot-field">
+            <label for="pf-notes">Anything else I should know?</label>
+            <textarea id="pf-notes" name="notes" rows="3"></textarea>
+          </div>
+          <div class="pilot-form-actions">
+            <button type="submit" class="btn btn-primary btn-lg btn-block pilot-submit" disabled>
+              <span class="pilot-submit-label">Apply for the pilot</span><span class="pilot-spinner" aria-hidden="true"></span>
+            </button>
+            <p class="pilot-error" role="alert">Something went wrong &mdash; please email <a href="mailto:founders@margin.work">founders@margin.work</a> and I&rsquo;ll respond fast.</p>
+            <p class="pilot-micro">No credit card. Free during the pilot. Cancel anytime.</p>
+          </div>
+        </form>
+        <div class="pilot-success" role="status" aria-live="polite">
+          <h3>Got it. I read every application personally.</h3>
+          <p>I&rsquo;ll reply within 24 hours &mdash; Blake</p>
+          <p><em>Meanwhile, here&rsquo;s a 60-second demo of what you&rsquo;ll be using &rarr;</em><br><a href="/product">See the product tour</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
