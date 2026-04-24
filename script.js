@@ -201,3 +201,114 @@
     if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
   });
 })();
+
+// ── Pilot application modal ───────────────────────────────────
+(() => {
+  const modal = document.getElementById('pilotModal');
+  if (!modal) return;
+  const form = document.getElementById('pilotForm');
+  const submit = modal.querySelector('.pilot-submit');
+  const errorEl = modal.querySelector('.pilot-error');
+  const successEl = modal.querySelector('.pilot-success');
+  const bodyEl = modal.querySelector('.pilot-modal-body');
+  const requiredFields = form.querySelectorAll('[required]');
+  let lastFocus = null;
+
+  const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  const getFocusable = () =>
+    Array.from(modal.querySelectorAll(focusableSelector)).filter(
+      (el) => !el.hasAttribute('disabled') && el.offsetParent !== null
+    );
+
+  function updateSubmitState() {
+    let ok = true;
+    requiredFields.forEach((f) => { if (!f.value.trim()) ok = false; });
+    submit.disabled = !ok;
+  }
+  form.addEventListener('input', updateSubmitState);
+  form.addEventListener('change', updateSubmitState);
+  updateSubmitState();
+
+  function open() {
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    errorEl.classList.remove('is-shown');
+    const focusables = getFocusable();
+    if (focusables.length) {
+      requestAnimationFrame(() => focusables[0].focus());
+    }
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    // Reset to form view so re-opening after success starts fresh
+    successEl.classList.remove('is-shown');
+    bodyEl.style.display = '';
+    form.reset();
+    updateSubmitState();
+    if (lastFocus && typeof lastFocus.focus === 'function') {
+      lastFocus.focus();
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.js-apply-pilot');
+    if (trigger) {
+      e.preventDefault();
+      open();
+    }
+  });
+  modal.querySelectorAll('[data-pilot-close]').forEach((el) => {
+    el.addEventListener('click', close);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('is-open')) return;
+    if (e.key === 'Escape') {
+      close();
+      return;
+    }
+    if (e.key === 'Tab') {
+      const focusables = getFocusable();
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement;
+      if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorEl.classList.remove('is-shown');
+    submit.setAttribute('aria-busy', 'true');
+    submit.disabled = true;
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    try {
+      const res = await fetch('/api/pilot-application', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('bad status: ' + res.status);
+      const json = await res.json().catch(() => ({}));
+      if (!json.ok) throw new Error('not ok');
+      bodyEl.style.display = 'none';
+      successEl.classList.add('is-shown');
+    } catch (err) {
+      errorEl.classList.add('is-shown');
+    } finally {
+      submit.removeAttribute('aria-busy');
+      updateSubmitState();
+    }
+  });
+})();
