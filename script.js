@@ -202,6 +202,32 @@
   });
 })();
 
+// ── Demo stub modal (placeholder until real video) ────────────
+(() => {
+  const modal = document.getElementById('demoStubModal');
+  if (!modal) return;
+  const closeBtn = document.getElementById('demoStubCloseBtn');
+  function open() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest('.js-demo-stub');
+    if (t) { e.preventDefault(); open(); }
+    if (e.target === modal) close();
+  });
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+  });
+})();
+
 // ── Pilot application modal ───────────────────────────────────
 (() => {
   const modal = document.getElementById('pilotModal');
