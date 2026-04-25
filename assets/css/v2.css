@@ -154,19 +154,14 @@ body {
   content: "";
   position: absolute;
   pointer-events: none;
-  border-radius: 50%;
-  filter: blur(120px);
+  border-radius: 9999px;
+  filter: blur(80px);
   z-index: 0;
-  width: 360px;
-  height: 360px;
-  top: -120px;
-  right: -180px;
-  background: rgba(143, 188, 149, 0.12);
-  opacity: 0.6;
-}
-@media (max-width: 599px) {
-  /* On mobile the blur bleeds across the whole viewport — hide it. */
-  .hero::before { display: none; }
+  width: 480px;
+  height: 480px;
+  top: -80px;
+  right: -10%;
+  background: rgba(187, 247, 208, 0.45);
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-grid {
