@@ -22,11 +22,11 @@ body {
 /* ───────── Header / Logo ───────── */
 .site-header {
   background: var(--surface-canvas);
-  border-bottom: 1px solid var(--ink-100);
+  border-bottom: 0;
   backdrop-filter: none;
 }
 .site-header.scrolled {
-  border-bottom-color: var(--ink-200);
+  border-bottom: 0;
   box-shadow: var(--shadow-xs);
 }
 .header-inner { padding-top: 16px; padding-bottom: 16px; }
@@ -153,15 +153,10 @@ body {
 .hero::before {
   content: "";
   position: absolute;
+  inset: 0;
   pointer-events: none;
-  border-radius: 9999px;
-  filter: blur(80px);
   z-index: 0;
-  width: 480px;
-  height: 480px;
-  top: -80px;
-  right: -10%;
-  background: rgba(187, 247, 208, 0.45);
+  background: radial-gradient(380px circle at 100% 0%, rgba(134, 239, 172, 0.22), transparent 65%);
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-grid {
@@ -178,33 +173,32 @@ body {
 /* Eyebrow row */
 .kicker {
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: 11px;
   line-height: 16px;
   font-weight: var(--fw-medium);
-  letter-spacing: var(--tracking-eyebrow);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-500);
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 }
 
 /* Status pill — dot left, text in middle (label · description, may wrap to 2 lines), arrow right.
    The text block wraps as one inline run; dot and arrow stay vertically centered. */
 .hero-pilot-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: var(--surface-pill);
+  gap: 8px;
+  background: rgba(240, 253, 244, 0.6);
   color: var(--ink-700);
-  padding: 14px 18px;
-  border-radius: 28px;
-  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-size: 13px;
   line-height: 1.35;
   font-weight: var(--fw-medium);
-  box-shadow: var(--shadow-xs);
-  margin: 0 0 16px;
+  box-shadow: none;
+  margin: 0 0 14px;
   text-decoration: none;
-  border: 1px solid rgba(47, 125, 58, 0.12);
-  width: 100%;
+  border: 1px solid #BBF7D0;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -234,16 +228,25 @@ body {
   align-self: center;
 }
 .hero-pilot-dot {
+  position: relative;
   width: 8px; height: 8px;
   background: var(--brand-green-600);
-  border-radius: 50%;
+  border-radius: 9999px;
   display: inline-block;
   flex-shrink: 0;
-  animation: pillPulse 3s ease-in-out infinite;
 }
-@keyframes pillPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+.hero-pilot-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #22c55e;
+  opacity: 0.75;
+  animation: pingHalo 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes pingHalo {
+  0%   { transform: scale(1);   opacity: 0.75; }
+  75%, 100% { transform: scale(2.25); opacity: 0; }
 }
 
 /* Hero headline */
@@ -263,18 +266,18 @@ body {
   .hero-headline { font-size: 60px; line-height: 1.05; }
 }
 .hl-price {
-  color: var(--brand-green-600);
+  color: var(--brand-green-700);
   font-weight: var(--fw-black);
   font-feature-settings: 'tnum','zero';
 }
 .hero-headline .hero-sub {
   display: block;
-  margin-top: 14px;
-  color: var(--ink-600);
+  margin-top: 12px;
+  color: var(--ink-500);
   font-family: var(--font-body);
-  font-weight: var(--fw-regular);
-  font-size: 15px;
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.45;
   letter-spacing: 0;
 }
 @media (min-width: 768px) {
@@ -285,7 +288,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 18px 0 0;
+  margin: 16px 0 0;
 }
 @media (max-width: 599px) {
   .hero-cta { flex-direction: column; align-items: stretch; }
@@ -300,11 +303,11 @@ body {
 
 /* Trust strip */
 .hero-trust {
-  margin-top: 18px;
+  margin-top: 16px;
   background: var(--surface-tinted);
   border: 1px solid var(--ink-100);
   border-radius: var(--radius-lg);
-  padding: 14px 12px;
+  padding: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
@@ -323,13 +326,13 @@ body {
 .trust-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   min-width: 0;
 }
 .trust-item-icon {
-  width: 30px; height: 30px;
+  width: 36px; height: 36px;
   background: var(--surface-pill);
-  border-radius: var(--radius-sm);
+  border-radius: 9999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -339,10 +342,10 @@ body {
 @media (min-width: 768px) {
   .trust-item-icon { width: 40px; height: 40px; }
 }
-.trust-item-icon svg { width: 16px; height: 16px; stroke-width: 1.75; }
+.trust-item-icon svg { width: 18px; height: 18px; stroke-width: 1.75; }
 .trust-item-label {
-  font-size: 12px;
-  font-weight: var(--fw-bold);
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
   color: var(--ink-900);
   line-height: 1.2;
 }
@@ -350,7 +353,7 @@ body {
   .trust-item-label { font-size: 14px; }
 }
 .trust-item-caption {
-  font-size: 10.5px;
+  font-size: 12px;
   color: var(--ink-500);
   line-height: 1.25;
 }
