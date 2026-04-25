@@ -156,7 +156,7 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(380px circle at 100% 0%, rgba(134, 239, 172, 0.22), transparent 65%);
+  background: radial-gradient(260px circle at 100% 4%, rgba(134, 239, 172, 0.25), transparent 60%);
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-grid {
@@ -276,8 +276,8 @@ body {
   color: var(--ink-500);
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 @media (min-width: 768px) {
