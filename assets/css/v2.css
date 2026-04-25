@@ -274,11 +274,12 @@ body {
 }
 .hero-headline .hero-sub {
   display: block;
-  margin-top: 24px;
+  margin-top: 20px;
   color: var(--ink-600);
+  font-family: var(--font-body);
   font-weight: var(--fw-regular);
-  font-size: 18px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 @media (min-width: 768px) {
