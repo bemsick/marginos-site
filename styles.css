@@ -1186,7 +1186,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .hero-cta .link-arrow { align-self: center; }
   .hero-desc { font-size: 15px; max-width: 100%; }
   .hero { overflow: hidden; }
-  .container { padding-left: 20px; padding-right: 20px; }
+  .container { padding-left: 24px; padding-right: 24px; }
 }
 
 /* Footer trademark disclaimer */
