@@ -1182,7 +1182,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   }
   .carousel-caption { font-size: 10.5px; padding: 0 16px; }
   .hero-cta { flex-direction: column; align-items: stretch; gap: 12px; }
-  .hero-cta .btn { width: 100%; white-space: normal; font-size: 15px; padding: 14px 18px; }
+  .hero-cta .btn { width: 100%; white-space: normal; font-size: 15px; padding: 14px 18px; border-radius: 12px; }
   .hero-cta .link-arrow { align-self: center; }
   .hero-desc { font-size: 15px; max-width: 100%; }
   .hero { overflow: hidden; }
