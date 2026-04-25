@@ -262,10 +262,10 @@ body {
   margin: 0 0 20px;
 }
 @media (min-width: 1024px) {
-  .hero-headline { font-size: 64px; line-height: 1.06; }
+  .hero-headline { font-size: 56px; line-height: 1.06; }
 }
 @media (min-width: 1280px) {
-  .hero-headline { font-size: 72px; line-height: 76px; }
+  .hero-headline { font-size: 60px; line-height: 1.05; }
 }
 .hl-price {
   color: var(--brand-green-600);
