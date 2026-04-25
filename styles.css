@@ -88,7 +88,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(24px, 5vw, 80px);
+  padding: 0 clamp(16px, 5vw, 80px);
 }
 
 .section {
@@ -1186,7 +1186,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .hero-cta .link-arrow { align-self: center; }
   .hero-desc { font-size: 15px; max-width: 100%; }
   .hero { overflow: hidden; }
-  .container { padding-left: 24px; padding-right: 24px; }
+  .container { padding-left: 16px; padding-right: 16px; }
 }
 
 /* Footer trademark disclaimer */

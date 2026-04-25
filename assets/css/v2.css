@@ -257,9 +257,9 @@ body {
   font-weight: var(--fw-black);
   color: var(--ink-900);
   letter-spacing: -0.025em;
-  font-size: clamp(40px, 11vw, 52px);
-  line-height: 1.04;
-  margin: 0 0 24px;
+  font-size: clamp(34px, 9vw, 44px);
+  line-height: 1.05;
+  margin: 0 0 20px;
 }
 @media (min-width: 1024px) {
   .hero-headline { font-size: 64px; line-height: 1.06; }
