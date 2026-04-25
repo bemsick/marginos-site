@@ -272,7 +272,7 @@
     document.body.style.overflow = '';
     // Reset to form view so re-opening after success starts fresh
     successEl.classList.remove('is-shown');
-    bodyEl.style.display = '';
+    form.style.display = '';
     form.reset();
     updateSubmitState();
     if (lastFocus && typeof lastFocus.focus === 'function') {
@@ -328,7 +328,7 @@
       if (!res.ok) throw new Error('bad status: ' + res.status);
       const json = await res.json().catch(() => ({}));
       if (!json.ok) throw new Error('not ok');
-      bodyEl.style.display = 'none';
+      form.style.display = 'none';
       successEl.classList.add('is-shown');
     } catch (err) {
       errorEl.classList.add('is-shown');
