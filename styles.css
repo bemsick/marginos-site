@@ -286,7 +286,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .mobile-nav {
   position: fixed;
   inset: 0;
-  z-index: 99;
+  /* Sit above the sticky header (z-index 100) so the translucent header
+     does not bleed the home-page CTA onto the menu sheet. */
+  z-index: 200;
   background: var(--bg, #F9F9F7);
   opacity: 0;
   pointer-events: none;
@@ -300,6 +302,14 @@ ul { list-style: none; margin: 0; padding: 0; }
   opacity: 1;
   pointer-events: auto;
 }
+/* When the mobile menu is open, hide the header CTA + nav links underneath
+   so the translucent sticky header cannot ghost over the menu sheet. The
+   close (X) toggle stays visible because it lives inside the sheet's own
+   z-index stack via the body class. */
+body[data-nav-open="true"] .site-header { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom-color: transparent; }
+body[data-nav-open="true"] .site-header .header-actions,
+body[data-nav-open="true"] .site-header .primary-nav { visibility: hidden; }
+body[data-nav-open="true"] .nav-toggle { position: relative; z-index: 201; }
 .mobile-nav-inner {
   display: flex;
   flex-direction: column;
