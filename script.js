@@ -28,6 +28,7 @@
       toggle.setAttribute('aria-expanded', 'false');
       toggle.setAttribute('aria-label', 'Open menu');
       document.body.style.overflow = '';
+      document.body.removeAttribute('data-nav-open');
       if (lastFocus && typeof lastFocus.focus === 'function') {
         lastFocus.focus();
       }
@@ -39,6 +40,7 @@
       toggle.setAttribute('aria-expanded', 'true');
       toggle.setAttribute('aria-label', 'Close menu');
       document.body.style.overflow = 'hidden';
+      document.body.setAttribute('data-nav-open', 'true');
       // Focus first focusable element inside the sheet
       const focusables = getFocusable();
       if (focusables.length) {
